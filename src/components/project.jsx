@@ -11,8 +11,8 @@ const project = () => {
   return (
     <div>
       <h1 className="text-4xl font-bold">My Projects 🧑‍💻</h1>
-      <div className="all-cards flex w-full flex-wrap justify-between bg-slate-300">
-        <div className="card h-[300px] bg-gray-100  bg-gray- 300 hover:scale-105 duration-500 hover:bg-slate-300  mt-10 w-[250px] flex flex-col items-center border-sky-950 bg-gary-100">
+      <div className="all-card rounded-lgs flex w-full flex-wrap justify-between pr-9 ">
+        <div className="card rounded-lg h-[300px] bg-gray-100  bg-gray- 300 hover:scale-105 duration-500 hover:   mt-10 w-[250px] flex flex-col items-center border-sky-950 bg-gary-100">
           <h1 className="text-2xl font-bold mb-5 ">CareSync</h1>
           <img
             className="img h-[210px] hover:scale-105 duration-500 w-full object-fill  object-center "
@@ -29,7 +29,7 @@ const project = () => {
           </div>
         </div>
 
-        <div className="card h-[300px]  hover:scale-105 duration-500 hover:bg-slate-300 bg-gray-100    mt-10 w-[250px] flex flex-col items-center border-sky-950 bg-gary-100">
+        <div className="card rounded-lg h-[300px]  hover:scale-105 duration-500  bg-gray-100    mt-10 w-[250px] flex flex-col items-center border-sky-950 bg-gary-100">
           <h1 className="text-2xl font-bold mb-5 ">AV Classes</h1>
           <img
             className="img hover:scale-105 duration-500 w-full object-fill  h-[210px]   "
@@ -45,7 +45,7 @@ const project = () => {
             </button>
           </div>
         </div>
-        <div className="card h-[300px] bg-gray-100  bg-gray- 300 hover:scale-105 duration-500 hover:bg-slate-300   mt-10 w-[250px] flex flex-col items-center border-sky-950 bg-gary-100">
+        <div className="card rounded-lg h-[300px] bg-gray-100  bg-gray- 300 hover:scale-105 duration-500 hover:    mt-10 w-[250px] flex flex-col items-center border-sky-950 bg-gary-100">
           <h1 className="text-2xl font-bold mb-5 ">UniUnity</h1>
           <img
             className="img h-[210px] hover:scale-105 duration-500 w-full object-fill  "
@@ -62,7 +62,7 @@ const project = () => {
           </div>
         </div>
 
-        <div className="card h-[300px] bg-gray-100  bg-gray- 300  hover:scale-105 duration-500 hover:bg-slate-300 mt-10 w-[250px] flex flex-col items-center border-sky-950 bg-gary-100">
+        <div className="card rounded-lg h-[300px] bg-gray-100  bg-gray- 300  hover:scale-105 duration-500 hover:  mt-10 w-[250px] flex flex-col items-center border-sky-950 bg-gary-100">
           <h1 className="text-2xl font-bold mb-5 ">School Website</h1>
           <img
             className="img h-[210px] hover:scale-105 duration-500 w-full object-fill  "
@@ -78,7 +78,7 @@ const project = () => {
             </button>
           </div>
         </div>
-        <div className="card h-[300px]  bg-gray-100 bg-gray- 300 hover:scale-105 duration-500 hover:bg-slate-300  mt-10 w-[250px] flex flex-col items-center border-sky-950 bg-gary-100">
+        <div className="card rounded-lg h-[300px]  bg-gray-100 bg-gray- 300 hover:scale-105 duration-500 hover:   mt-10 w-[250px] flex flex-col items-center border-sky-950 bg-gary-100">
           <h1 className="text-2xl font-bold mb-5">Gym Website</h1>
           <img
             className="img h-[210px] hover:scale-105 duration-500 w-full object-fill  "
@@ -94,7 +94,7 @@ const project = () => {
             </button>
           </div>
         </div>
-        <div className="card h-[300px] bg-gray-100  bg-gray- 300 hover:scale-105 duration-500 hover:bg-slate-300  mt-10 w-[250px] flex flex-col items-center border-sky-950 bg-gary-100">
+        <div className="card rounded-lg h-[300px] bg-gray-100  bg-gray- 300 hover:scale-105 duration-500 hover:   mt-10 w-[250px] flex flex-col items-center border-sky-950 bg-gary-100">
           <h1 className="text-2xl font-bold mb-5 ">Survey</h1>
           <img
             className="img h-[210px] hover:scale-105 duration-500 w-full object-fill  "

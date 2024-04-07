@@ -8,6 +8,8 @@ import java from "../../public/java.svg";
 import postman from "../../public/postman.svg";
 import git from "../../public/git.svg";
 import cpp from "../../public/cpp.svg";
+import c from "../../public/c.svg";
+
 import py from "../../public/py.svg";
 import express from "../../public/express.svg";
 import react from "../../public/react.svg";
@@ -27,7 +29,7 @@ const skills = () => {
 
         <img src={cpp} alt="" />
         <img src={java} alt="" />
-        <img src={cpp} alt="" />
+        <img src={c} alt="" />
         <img src={py} alt="" />
         <img src={git} alt="" />
         <img src={postman} alt="" />

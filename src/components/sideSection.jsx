@@ -2,14 +2,19 @@ import React from "react";
 import logo from "../../public/samf.jpg";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import Button from "@material-ui/core/Button";
+import github from "../../public/github.png";
+import linkedin from "../../public/link.png";
+import instagram from "../../public/insta.png";
+import twitter from "../../public/twit.png";
+import facebook from "../../public/fb.png";
 
 const sideSection = () => {
   return (
     <div>
       <div className="main flex  ">
-        <div className="left w-[25vw] border-2 h-[100vh]  bg-slate-600 flex flex-col pt-7 items-center fixed p-[1rem] border-r border-zinc-950">
+        <div className="left w-[25vw]  h-[100vh]  bg-slate-500 flex flex-col pt-7 items-center fixed p-[1rem]  border-zinc-950">
           <img
-            className="rounded-full h-[200px] w-[200px] items-center object-fill hover:scale-110 duration-500"
+            className="rounded-full h-[200px] w-[200px] items-center object-fill object-left hover:scale-110 duration-500"
             src={logo}
             alt=""
             srcset=""
@@ -35,10 +40,12 @@ const sideSection = () => {
               </li>
             </ul>
           </div>
-          <div className="logo">
-            {/* <FontAwesomeIcon icon="fa-brands fa-github" />
-            <FontAwesomeIcon icon="fa-brands fa-linkedin" />
-            <Button variant="contained">Hello World</Button> */}
+          <div className="logo flex w-full  mt-9 ">
+            <img src={github} alt="" srcset="" />
+            <img src={linkedin} alt="" srcset="" />
+            <img src={twitter} alt="" srcset="" />
+            <img src={instagram} alt="" srcset="" />
+            <img src={facebook} alt="" srcset="" />
           </div>
         </div>
         <div className="right"></div>
