@@ -1,13 +1,13 @@
 import React from "react";
 import logo from "../../public/samf.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import Button from "@material-ui/core/Button";
 
 const sideSection = () => {
   return (
     <div>
-      <div className="main flex ">
-        <div className="left w-[25vw] border-2 h-[100vh] bg-gray-100 flex flex-col pt-7 items-center fixed p-[1rem] border-r border-zinc-950">
+      <div className="main flex  ">
+        <div className="left w-[25vw] border-2 h-[100vh]  bg-slate-400 flex flex-col pt-7 items-center fixed p-[1rem] border-r border-zinc-950">
           <img
             className="rounded-full h-[200px] w-[200px] items-center hover:scale-110 duration-500"
             src={logo}

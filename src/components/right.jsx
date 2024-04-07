@@ -4,10 +4,10 @@ import Project from "./project";
 const right = () => {
   return (
     <div>
-      <div className="main w-[75vw] flex  justify-center flex-col pl-5 pt-5">
+      <div className="main w-[75vw] flex  justify-center flex-col  pt-5 pl-16 bg-slate-300">
         <h1 className="text-2xl">Hello Everyone!👋 </h1>
         <br />
-        <h1 className="text-5xl font-bold ">SAMAR ABBAS</h1>
+        <h1 className="text-5xl font-bold "> I'm SAMAR ABBAS</h1>
         <h1 className="text-2xl text-gray-600 font-serif mt-2">
           Software Developer
         </h1>

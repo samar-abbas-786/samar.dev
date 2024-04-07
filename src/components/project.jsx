@@ -1,30 +1,116 @@
 import React from "react";
+import logo from "../../public/samf.jpg";
+import avs from "../../public/avs.png";
+import survey from "../../public/survey - Copy.png";
+import gym from "../../public/gym.png";
+import caresync from "../../public/caresync.png";
+import mdes from "../../public/mdes.png";
+import UniUnity from "../../public/UniUnity.png";
 
 const project = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold">My Projects 🧑‍💻</h1>
-      {/* <div className="all-cards flex justify-evenly flex-wrap">
-        <div className="card h-[300px] w-[25vw] border-2 mt-6">
-          <img src="" alt="" />
-        </div>
-        <div className="card h-[300px] w-[25vw] border-2 mt-6">
-          <img src="" alt="" />
+      <div className="all-cards flex w-full flex-wrap justify-evenly bg-slate-300">
+        <div className="card h-[300px] bg-gray-100  bg-gray- 300 hover:scale-105 duration-500 hover:bg-slate-300  mt-10 w-[250px] flex flex-col items-center border-sky-950 bg-gary-100">
+          <h1 className="text-2xl font-bold mb-5 ">CareSync</h1>
+          <img
+            className="img h-[210px] hover:scale-105 duration-500 w-full object-fill  object-center "
+            src={caresync}
+            alt=""
+          />{" "}
+          <div className="btns h-16 w-full  flex justify-evenly items-center">
+            <button className="  text-white  w-auto px-3 border bg-black hover:bg-neutral-700 border-sky-950">
+              Source Code
+            </button>
+            <button className="  w-auto px-3 border hover:bg-black hover:text-white hover:ease-in-out hover:scale-105 duration- 300  border-sky-950 ">
+              Live
+            </button>
+          </div>
         </div>
 
-        <div className="card h-[300px] w-[25vw] border-2 mt-6">
-          <img src="" alt="" />
+        <div className="card h-[300px]  hover:scale-105 duration-500 hover:bg-slate-300 bg-gray-100    mt-10 w-[250px] flex flex-col items-center border-sky-950 bg-gary-100">
+          <h1 className="text-2xl font-bold mb-5 ">AV Classes</h1>
+          <img
+            className="img hover:scale-105 duration-500 w-full object-fill  h-[210px]   "
+            src={avs}
+            alt=""
+          />
+          <div className="btns h-16 w-full  flex justify-evenly items-center">
+            <button className="  text-white  w-auto px-3 border bg-black hover:bg-neutral-700 border-sky-950">
+              Source Code
+            </button>
+            <button className="  w-auto px-3 border hover:bg-black hover:text-white hover:ease-in-out hover:scale-105 duration- 300  border-sky-950 ">
+              Live
+            </button>
+          </div>
         </div>
-        <div className="card h-[300px] w-[25vw] border-2 mt-6">
-          <img src="" alt="" />
+        <div className="card h-[300px] bg-gray-100  bg-gray- 300 hover:scale-105 duration-500 hover:bg-slate-300   mt-10 w-[250px] flex flex-col items-center border-sky-950 bg-gary-100">
+          <h1 className="text-2xl font-bold mb-5 ">UniUnity</h1>
+          <img
+            className="img h-[210px] hover:scale-105 duration-500 w-full object-fill  "
+            src={UniUnity}
+            alt=""
+          />{" "}
+          <div className="btns h-16 w-full  flex justify-evenly items-center">
+            <button className="  text-white  w-auto px-3 border bg-black hover:bg-neutral-700 border-sky-700">
+              Source Code
+            </button>
+            <button className="  w-auto px-3 border hover:bg-black hover:text-white hover:ease-in-out hover:scale-105 duration- 300  border-sky-950 ">
+              Live
+            </button>
+          </div>
         </div>
-        <div className="card h-[300px] w-[25vw] border-2 mt-6">
-          <img src="" alt="" />
+
+        <div className="card h-[300px] bg-gray-100  bg-gray- 300  hover:scale-105 duration-500 hover:bg-slate-300 mt-10 w-[250px] flex flex-col items-center border-sky-950 bg-gary-100">
+          <h1 className="text-2xl font-bold mb-5 ">School Website</h1>
+          <img
+            className="img h-[210px] hover:scale-105 duration-500 w-full object-fill  "
+            src={mdes}
+            alt=""
+          />{" "}
+          <div className="btns h-16 w-full  flex justify-evenly items-center">
+            <button className="  text-white  w-auto px-3 border bg-black hover:bg-neutral-700 border-sky-700">
+              Source Code
+            </button>
+            <button className="  w-auto px-3 border hover:bg-black hover:text-white hover:ease-in-out hover:scale-105 duration- 300  border-sky-950 ">
+              Live
+            </button>
+          </div>
         </div>
-        <div className="card h-[300px] w-[25vw] border-2 mt-6">
-          <img src="" alt="" />
-        </div> */}
-      {/* </div> */}
+        <div className="card h-[300px]  bg-gray-100 bg-gray- 300 hover:scale-105 duration-500 hover:bg-slate-300  mt-10 w-[250px] flex flex-col items-center border-sky-950 bg-gary-100">
+          <h1 className="text-2xl font-bold mb-5">Gym Website</h1>
+          <img
+            className="img h-[210px] hover:scale-105 duration-500 w-full object-fill  "
+            src={gym}
+            alt=""
+          />{" "}
+          <div className="btns h-16 w-full  flex justify-evenly items-center">
+            <button className="  text-white  w-auto px-3 border bg-black hover:bg-neutral-700 border-sky-950">
+              Source Code
+            </button>
+            <button className="  w-auto px-3 border hover:bg-black hover:text-white hover:ease-in-out hover:scale-105 duration- 300  border-sky-950 ">
+              Live
+            </button>
+          </div>
+        </div>
+        <div className="card h-[300px] bg-gray-100  bg-gray- 300 hover:scale-105 duration-500 hover:bg-slate-300  mt-10 w-[250px] flex flex-col items-center border-sky-950 bg-gary-100">
+          <h1 className="text-2xl font-bold mb-5 ">Survey</h1>
+          <img
+            className="img h-[210px] hover:scale-105 duration-500 w-full object-fill  "
+            src={survey}
+            alt=""
+          />{" "}
+          <div className="btns h-16 w-full  flex justify-evenly items-center">
+            <button className="  text-white  w-auto px-3 border bg-black hover:bg-neutral-700 border-sky-700">
+              Source Code
+            </button>
+            <button className="  w-auto px-3 border hover:bg-black hover:text-white hover:ease-in-out hover:scale-105 duration- 300  border-sky-950 ">
+              Live
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
