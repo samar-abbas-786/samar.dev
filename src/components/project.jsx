@@ -10,8 +10,8 @@ import UniUnity from "../../public/UniUnity.png";
 const project = () => {
   return (
     <div>
-      <h1 className="text-3xl font-bold">My Projects 🧑‍💻</h1>
-      <div className="all-cards flex w-full flex-wrap justify-evenly bg-slate-300">
+      <h1 className="text-4xl font-bold">My Projects 🧑‍💻</h1>
+      <div className="all-cards flex w-full flex-wrap justify-between bg-slate-300">
         <div className="card h-[300px] bg-gray-100  bg-gray- 300 hover:scale-105 duration-500 hover:bg-slate-300  mt-10 w-[250px] flex flex-col items-center border-sky-950 bg-gary-100">
           <h1 className="text-2xl font-bold mb-5 ">CareSync</h1>
           <img

@@ -1,5 +1,8 @@
 import React from "react";
 import Project from "./project";
+import Contact from "./contact";
+import Skill from "./skills";
+import Footer from "./footer";
 
 const right = () => {
   return (
@@ -32,6 +35,15 @@ const right = () => {
         </div>
         <div className="mt-10">
           <Project></Project>
+        </div>
+        <div className="mt-24">
+          <Skill></Skill>
+        </div>
+        <div className="mt-16">
+          <Contact></Contact>
+        </div>
+        <div className="mt-16">
+          <Footer></Footer>
         </div>
       </div>
     </div>

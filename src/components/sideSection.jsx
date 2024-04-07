@@ -7,9 +7,9 @@ const sideSection = () => {
   return (
     <div>
       <div className="main flex  ">
-        <div className="left w-[25vw] border-2 h-[100vh]  bg-slate-400 flex flex-col pt-7 items-center fixed p-[1rem] border-r border-zinc-950">
+        <div className="left w-[25vw] border-2 h-[100vh]  bg-slate-600 flex flex-col pt-7 items-center fixed p-[1rem] border-r border-zinc-950">
           <img
-            className="rounded-full h-[200px] w-[200px] items-center hover:scale-110 duration-500"
+            className="rounded-full h-[200px] w-[200px] items-center object-fill hover:scale-110 duration-500"
             src={logo}
             alt=""
             srcset=""
@@ -17,22 +17,20 @@ const sideSection = () => {
 
           <div className="list mt-5">
             <ul className="flex flex-col w-full ">
-              <li className="  text-center text-lg h-max p-1 w-[25vw] hover:bg-slate-200 hover:text-xl hover:ease-in-out duration-300">
+              <li className=" bg-slate-200 p-2 text-lg h-max text-black    font-bold w-[25vw] hover:bg-slate-200 hover:text-black hover:text-xl hover:ease-in-out duration-300">
                 Home
               </li>
-              <li className="  text-center text-lg h-max p-1 w-[25vw] hover:bg-slate-200 hover:text-xl hover:ease-in-out duration-300">
-                About
-              </li>
-              <li className="  text-center text-lg h-max p-1 w-[25vw] hover:bg-slate-200 hover:text-xl hover:ease-in-out duration-300">
+
+              <li className="    p-2 text-lg h-max   text-white font-bold w-[25vw] hover:bg-slate-200 hover:text-black hover:text-xl hover:ease-in-out duration-300">
                 Projects
               </li>
-              <li className="  text-center text-lg h-max p-1 w-[25vw] hover:bg-slate-200 hover:text-xl hover:ease-in-out duration-300">
+              <li className="    p-2 text-lg h-max   text-white font-bold w-[25vw] hover:bg-slate-200 hover:text-black hover:text-xl hover:ease-in-out duration-300">
                 CV
               </li>
-              <li className="  text-center text-lg h-max p-1 w-[25vw] hover:bg-slate-200 hover:text-xl hover:ease-in-out duration-300">
+              <li className="    p-2 text-lg h-max   text-white font-bold w-[25vw] hover:bg-slate-200 hover:text-black hover:text-xl hover:ease-in-out duration-300">
                 Contact
               </li>
-              <li className="  text-center text-lg h-max p-1 w-[25vw] hover:bg-slate-200 hover:text-xl hover:ease-in-out duration-300">
+              <li className="    p-2 text-lg h-max   text-white font-bold w-[25vw] hover:bg-slate-200 hover:text-black hover:text-xl hover:ease-in-out duration-300">
                 Skills
               </li>
             </ul>
