@@ -4,6 +4,7 @@ import Right from "./components/right";
 function App() {
   return (
     <>
+      <div className="top"></div>
       <div className="main flex justify-between">
         <Sidesection></Sidesection>
         <Right></Right>

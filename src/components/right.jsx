@@ -1,4 +1,5 @@
 import React from "react";
+import Project from "./project";
 
 const right = () => {
   return (
@@ -10,7 +11,7 @@ const right = () => {
         <h1 className="text-2xl text-gray-600 font-serif mt-2">
           Software Developer
         </h1>
-        <p className=" text-lg mt-3">
+        <p className=" write text-lg mt-3">
           As a Mern Stack developer, my objective is to architect and develop
           high-quality web applications using{" "}
           <b className="text-stone-700">
@@ -28,6 +29,9 @@ const right = () => {
           <button className=" border px-3 text-lg border-black hover:bg-black hover:text-white hover:ease-in-out hover:scale-105 duration-200 rounded-sm h-[40px] w-max">
             Check Github
           </button>
+        </div>
+        <div className="mt-10">
+          <Project></Project>
         </div>
       </div>
     </div>
