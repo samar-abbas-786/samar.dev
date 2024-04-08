@@ -19,7 +19,6 @@ const sideSection = (props) => {
             alt=""
             srcset=""
           />
-
           <div className="list mt-5">
             <ul className="flex flex-col w-full ">
               <li
@@ -55,12 +54,22 @@ const sideSection = (props) => {
               </li>
             </ul>
           </div>
-          <div className="logo flex w-full  mt-9 ">
+          <div className="logo flex w-full  mt-3 ">
             <img onClick={props.link} src={linkedin} alt="" srcset="" />
             <img onClick={props.github} src={github} alt="" srcset="" />
             <img onClick={props.twitter} src={twitter} alt="" srcset="" />
             <img onClick={props.insta} src={instagram} alt="" srcset="" />
             <img onClick={props.fb} src={facebook} alt="" srcset="" />
+          </div>
+          <div className="emph">
+            <div className="mt-2 text-sm text-red-200">
+              <b className="text-black">Email: </b>
+              <span className="font-sans ">samarabbas172003@gmail.com</span>
+            </div>
+            <div className="text-red-200 ">
+              <b className="text-sm text-black">Phone No.</b>
+              <span className="font-sans text-sm">+91 9997405528</span>
+            </div>
           </div>
         </div>
         <div className="right"></div>
