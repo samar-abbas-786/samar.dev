@@ -5,7 +5,7 @@ const contact = () => {
     <div>
       <div className="outer flex flex-col items-center">
         <h1 className="text-4xl font-bold">Get in Touch</h1>
-        <i>Reach out and let's turn ideas into action</i>
+        <i id="contact">Reach out and let's turn ideas into action</i>
         <input type="text" placeholder="Name" />
         <input type="text" placeholder="Email" />
         <input type="number" placeholder="Phone NO." />

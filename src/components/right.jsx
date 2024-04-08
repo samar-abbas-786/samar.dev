@@ -4,7 +4,97 @@ import Contact from "./contact";
 import Skill from "./skills";
 import Footer from "./footer";
 
-const right = () => {
+const right = (props) => {
+  function scroll() {
+    window.scrollTo({
+      top: 5000,
+      behavior: "smooth",
+    });
+  }
+  function avs() {
+    const link = "https://aligarian-s-visionary-classes-wakh.vercel.app/";
+    window.open(link, "_blank");
+  }
+
+  function careSync() {
+    const link = "https://caresync2-3.onrender.com";
+    window.open(link, "_blank");
+  }
+
+  function gym() {
+    const link = "https://gym-website-virid.vercel.app/";
+    window.open(link, "_blank");
+  }
+
+  function UniUnity() {
+    alert("This Website is under development");
+  }
+
+  function school() {
+    alert("This Website is under development");
+  }
+
+  function survey() {
+    const link = "https://survey-payu.vercel.app/";
+    window.open(link, "_blank");
+  }
+
+  // Github Functions
+  function avsg() {
+    const link =
+      "https://github.com/samar-abbas-786/Aligarian-s-Visionary-Classes";
+    window.open(link, "_blank");
+  }
+  function caresyncg() {
+    const link = "https://github.com/samar-abbas-786/CareSync2";
+    window.open(link, "_blank");
+  }
+  function gymg() {
+    const link = "https://github.com/samar-abbas-786/Gym-Website";
+    window.open(link, "_blank");
+  }
+  function ug() {
+    const link = "https://github.com/samar-abbas-786/UniUnity";
+    window.open(link, "_blank");
+  }
+  function schg() {
+    const link = "https://github.com/samar-abbas-786/MDE-school";
+    window.open(link, "_blank");
+  }
+  function syg() {
+    const link = "https://github.com/samar-abbas-786/SURVEY_PAYU";
+    window.open(link, "_blank");
+  }
+
+  // function for links on left side
+
+  function home() {
+    const home = document.getElementById("home");
+    if (home) {
+      home.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+  function project() {
+    const project = document.getElementById("project");
+    if (project) {
+      project.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+  function contact() {
+    const contact = document.getElementById("contact");
+    if (contact) {
+      contact.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+  function skill() {
+    const skill = document.getElementById("skill");
+    if (skill) {
+      skill.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
     <div>
       <div className="main w-[75vw] flex  justify-center flex-col  pt-5   bg-white">
@@ -26,17 +116,36 @@ const right = () => {
           Let's build the future of web development together.
         </p>
         <div className="buttons mt-8 w-1/3 flex justify-between ml-16 ">
-          <button className=" border px-3  text-lg border-black  bg-black text-white hover:bg-neutral-700 rounded-sm h-[40px] w-max">
+          <button
+            onClick={scroll}
+            className=" border px-3  text-lg border-black  bg-black text-white hover:bg-neutral-700 rounded-sm h-[40px] w-max"
+          >
             Let's Connect
           </button>
-          <button className=" border px-3 text-lg border-black hover:bg-black hover:text-white hover:ease-in-out hover:scale-105 duration-200 rounded-sm h-[40px] w-max">
+          <button
+            onClick={props.github}
+            className=" border px-3 text-lg border-black hover:bg-black hover:text-white hover:ease-in-out hover:scale-105 duration-200 rounded-sm h-[40px] w-max"
+          >
             Check Github
           </button>
         </div>
         <div className="mt-24 ml-16">
-          <Project></Project>
+          <Project
+            avs={avs}
+            careSync={careSync}
+            gym={gym}
+            survey={survey}
+            UniUnity={UniUnity}
+            school={school}
+            syg={syg}
+            caresyncg={caresyncg}
+            avsg={avsg}
+            schg={schg}
+            gymg={gymg}
+            ug={ug}
+          ></Project>
         </div>
-        <div className="mt-24 ml-16">
+        <div id="skill" className="mt-24 ml-16">
           <Skill></Skill>
         </div>
         <div className="mt-24 ml-16">

@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../../public/samf.jpg";
 import avs from "../../public/avs.png";
 import survey from "../../public/survey - Copy.png";
 import gym from "../../public/gym.png";
@@ -7,10 +6,10 @@ import caresync from "../../public/caresync.png";
 import mdes from "../../public/mdes.png";
 import UniUnity from "../../public/UniUnity.png";
 
-const project = () => {
+const project = (props) => {
   return (
     <div>
-      <h1 className="text-4xl font-bold">My Projects 🧑‍💻</h1>
+      <h1 id="project" className="text-4xl font-bold">My Projects 🧑‍💻</h1>
       <div className="all-card rounded-lgs flex w-full flex-wrap justify-between pr-9 ">
         <div className="card rounded-lg h-[300px] bg-gray-100  bg-gray- 300 hover:scale-105 duration-500 hover:   mt-10 w-[250px] flex flex-col items-center border-sky-950 bg-gary-100">
           <h1 className="text-2xl font-bold mb-5 ">CareSync</h1>
@@ -20,10 +19,16 @@ const project = () => {
             alt=""
           />{" "}
           <div className="btns h-16 w-full  flex justify-evenly items-center">
-            <button className="  text-white  w-auto px-3 border bg-black hover:bg-neutral-700 border-sky-950">
+            <button
+              onClick={props.caresyncg}
+              className="  text-white  w-auto px-3 border bg-black hover:bg-neutral-700 border-sky-950"
+            >
               Source Code
             </button>
-            <button className="  w-auto px-3 border hover:bg-black hover:text-white hover:ease-in-out hover:scale-105 duration- 300  border-sky-950 ">
+            <button
+              onClick={props.careSync}
+              className="  w-auto px-3 border hover:bg-black hover:text-white hover:ease-in-out hover:scale-105 duration- 300  border-sky-950 "
+            >
               Live
             </button>
           </div>
@@ -37,10 +42,16 @@ const project = () => {
             alt=""
           />
           <div className="btns h-16 w-full  flex justify-evenly items-center">
-            <button className="  text-white  w-auto px-3 border bg-black hover:bg-neutral-700 border-sky-950">
+            <button
+              onClick={props.avsg}
+              className="  text-white  w-auto px-3 border bg-black hover:bg-neutral-700 border-sky-950"
+            >
               Source Code
             </button>
-            <button className="  w-auto px-3 border hover:bg-black hover:text-white hover:ease-in-out hover:scale-105 duration- 300  border-sky-950 ">
+            <button
+              onClick={props.avs}
+              className="  w-auto px-3 border hover:bg-black hover:text-white hover:ease-in-out hover:scale-105 duration- 300  border-sky-950 "
+            >
               Live
             </button>
           </div>
@@ -53,10 +64,16 @@ const project = () => {
             alt=""
           />{" "}
           <div className="btns h-16 w-full  flex justify-evenly items-center">
-            <button className="  text-white  w-auto px-3 border bg-black hover:bg-neutral-700 border-sky-700">
+            <button
+              onClick={props.ug}
+              className="  text-white  w-auto px-3 border bg-black hover:bg-neutral-700 border-sky-700"
+            >
               Source Code
             </button>
-            <button className="  w-auto px-3 border hover:bg-black hover:text-white hover:ease-in-out hover:scale-105 duration- 300  border-sky-950 ">
+            <button
+              onClick={props.UniUnity}
+              className="  w-auto px-3 border hover:bg-black hover:text-white hover:ease-in-out hover:scale-105 duration- 300  border-sky-950 "
+            >
               Live
             </button>
           </div>
@@ -70,10 +87,16 @@ const project = () => {
             alt=""
           />{" "}
           <div className="btns h-16 w-full  flex justify-evenly items-center">
-            <button className="  text-white  w-auto px-3 border bg-black hover:bg-neutral-700 border-sky-700">
+            <button
+              onClick={props.schg}
+              className="  text-white  w-auto px-3 border bg-black hover:bg-neutral-700 border-sky-700"
+            >
               Source Code
             </button>
-            <button className="  w-auto px-3 border hover:bg-black hover:text-white hover:ease-in-out hover:scale-105 duration- 300  border-sky-950 ">
+            <button
+              onClick={props.school}
+              className="  w-auto px-3 border hover:bg-black hover:text-white hover:ease-in-out hover:scale-105 duration- 300  border-sky-950 "
+            >
               Live
             </button>
           </div>
@@ -86,10 +109,16 @@ const project = () => {
             alt=""
           />{" "}
           <div className="btns h-16 w-full  flex justify-evenly items-center">
-            <button className="  text-white  w-auto px-3 border bg-black hover:bg-neutral-700 border-sky-950">
+            <button
+              onClick={props.gymg}
+              className="  text-white  w-auto px-3 border bg-black hover:bg-neutral-700 border-sky-950"
+            >
               Source Code
             </button>
-            <button className="  w-auto px-3 border hover:bg-black hover:text-white hover:ease-in-out hover:scale-105 duration- 300  border-sky-950 ">
+            <button
+              onClick={props.gym}
+              className="  w-auto px-3 border hover:bg-black hover:text-white hover:ease-in-out hover:scale-105 duration- 300  border-sky-950 "
+            >
               Live
             </button>
           </div>
@@ -102,10 +131,16 @@ const project = () => {
             alt=""
           />{" "}
           <div className="btns h-16 w-full  flex justify-evenly items-center">
-            <button className="  text-white  w-auto px-3 border bg-black hover:bg-neutral-700 border-sky-700">
+            <button
+              onClick={props.syg}
+              className="  text-white  w-auto px-3 border bg-black hover:bg-neutral-700 border-sky-700"
+            >
               Source Code
             </button>
-            <button className="  w-auto px-3 border hover:bg-black hover:text-white hover:ease-in-out hover:scale-105 duration- 300  border-sky-950 ">
+            <button
+              onClick={props.survey}
+              className="  w-auto px-3 border hover:bg-black hover:text-white hover:ease-in-out hover:scale-105 duration- 300  border-sky-950 "
+            >
               Live
             </button>
           </div>

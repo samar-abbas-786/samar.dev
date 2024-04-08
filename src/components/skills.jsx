@@ -18,7 +18,7 @@ const skills = () => {
   return (
     <div>
       <h1 className="text-4xl font-bold">My Skills</h1>
-      <div className="skills-container flex w-full  mt-16 flex-wrap">
+      <div id="skill" className="skills-container flex w-full  mt-16 flex-wrap">
         <img src={js} alt="" />
         <img src={react} alt="" />
         <img src={express} alt="" />
