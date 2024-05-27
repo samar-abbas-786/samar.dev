@@ -12,8 +12,8 @@ const project = (props) => {
       <h1 id="project" className="text-4xl font-bold">
         My Projects 🧑‍💻
       </h1>
-      <div className="all-card rounded-lg flex w-full overflow-x-scroll justify-between ">
-        <div className="card rounded-lg w-[250px] h-[300px] bg-gray-100  bg-gray- 300 hover:scale-105 duration-500 hover:mt-10  flex flex-col items-center border-sky-950 bg-gary-100">
+      <div className="all-card rounded-lg flex w-full  flex-wrap justify-between p-9">
+        <div className="card mt-10 rounded-lg w-[250px] h-[300px] bg-gray-100  bg-gray- 300 hover:scale-105 duration-500 hover:mt-10  flex flex-col items-center border-sky-950 bg-gary-100">
           <h1 className="text-2xl font-bold mb-5 ">CareSync</h1>
           <img
             className="img h-[210px] hover:scale-105 duration-500 w-full object-fill  object-center "
