@@ -97,7 +97,7 @@ const right = (props) => {
 
   return (
     <div>
-      <div className="main w-[75vw] flex  justify-center flex-col  pt-5   bg-white">
+      <div className="main w-[75vw] flex  justify-center flex-col  pt-5   bg-slate-200">
         <h1 className="text-2xl ml-16">Hello Everyone!👋 </h1>
         <br />
         <h1 className="text-5xl font-bold ml-16 "> I'm SAMAR ABBAS</h1>

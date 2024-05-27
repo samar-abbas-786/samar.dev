@@ -8,7 +8,7 @@ const contact = () => {
         <i id="contact">Reach out and let's turn ideas into action</i>
         <input type="text" placeholder="Name" />
         <input type="text" placeholder="Email" />
-        <input type="number" placeholder="Phone NO." />
+        <input type="number" placeholder="Phone No." />
         <textarea
           placeholder="Share Your Project Idea"
           name=""

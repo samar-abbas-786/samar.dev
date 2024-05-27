@@ -1,6 +1,7 @@
 import "./App.css";
 import Sidesection from "./components/sideSection";
 import Right from "./components/right";
+import { useState } from "react";
 function App() {
   function github() {
     const link = "https://github.com/samar-abbas-786/";
@@ -63,11 +64,15 @@ function App() {
     }
   }
 
+  const [selected, setSelected] = useState("Home");
+
   return (
     <>
       <div className="top"></div>
       <div className="main flex justify-between">
         <Sidesection
+          selected={selected}
+          setSelected={setSelected}
           fb={fb}
           insta={insta}
           github={github}
