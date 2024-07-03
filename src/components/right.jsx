@@ -1,8 +1,11 @@
 import React from "react";
-import Project from "./project";
+// import Project from "./project";
 import Contact from "./contact";
 import Skill from "./skills";
 import Footer from "./footer";
+import Projects_Section from "./Projects_Section";
+import { motion } from "framer-motion";
+// import Single_project from "./single-project";
 
 const right = (props) => {
   function scroll() {
@@ -98,13 +101,38 @@ const right = (props) => {
   return (
     <div>
       <div className="main w-[75vw] flex  justify-center flex-col  pt-5   bg-slate-200">
-        <h1 className="text-2xl ml-16">Hello Everyone!👋 </h1>
+        <motion.h1
+          initial={{ x: 50 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.5, delay: 0.16 }}
+          className="text-2xl ml-16"
+        >
+          Hello Everyone!👋{" "}
+        </motion.h1>
         <br />
-        <h1 className="text-5xl font-bold ml-16 "> I'm SAMAR ABBAS</h1>
-        <h1 className="text-2xl text-gray-600 font-serif mt-2 ml-16">
+        <motion.h1
+          initial={{ x: 50 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.5, delay: 0.16 }}
+          className="text-5xl font-bold ml-16 "
+        >
+          {" "}
+          I'm SAMAR ABBAS
+        </motion.h1>
+        <motion.h1
+          initial={{ x: 50 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.5, delay: 0.16 }}
+          className="text-2xl text-gray-600 font-serif mt-2 ml-16"
+        >
           Software Developer
-        </h1>
-        <p className=" write text-lg mt-6 ml-16">
+        </motion.h1>
+        <motion.p
+          initial={{ x: 50 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.5, delay: 0.16 }}
+          className=" write text-lg mt-6 ml-16"
+        >
           As a Mern Stack developer, my objective is to architect and develop
           high-quality web applications using{" "}
           <b className="text-stone-700">
@@ -114,8 +142,13 @@ const right = (props) => {
           I aim to contribute my expertise to create seamless user experiences,
           drive business growth, and stay updated with the latest technologies.
           Let's build the future of web development together.
-        </p>
-        <div className="buttons mt-8 w-1/3 flex justify-between ml-16 ">
+        </motion.p>
+        <motion.div
+          initial={{ x: 50 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.5, delay: 0.16 }}
+          className="buttons mt-8 w-1/3 flex justify-between ml-16 "
+        >
           <button
             onClick={scroll}
             className=" border px-3  text-lg border-black  bg-black text-white hover:bg-neutral-700 rounded-sm h-[40px] w-max"
@@ -128,9 +161,12 @@ const right = (props) => {
           >
             Check Github
           </button>
-        </div>
+        </motion.div>
         <div className="mt-24 ml-16">
-          <Project
+          <Projects_Section />
+          {/* <Single_project /> */}
+
+          {/* <Project
             avs={avs}
             careSync={careSync}
             gym={gym}
@@ -143,7 +179,7 @@ const right = (props) => {
             schg={schg}
             gymg={gymg}
             ug={ug}
-          ></Project>
+          ></Project> */}
         </div>
         <div id="skill" className="mt-24 ml-16">
           <Skill></Skill>

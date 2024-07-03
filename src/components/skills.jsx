@@ -17,7 +17,7 @@ import react from "../../public/react.svg";
 const skills = () => {
   return (
     <div>
-      <h1 className="text-4xl font-bold">My Skills</h1>
+      <h1 className="text-4xl font-bold mt-28">My Skills</h1>
       <div id="skill" className="skills-container flex w-full  mt-16 flex-wrap">
         <img src={js} alt="" />
         <img src={react} alt="" />

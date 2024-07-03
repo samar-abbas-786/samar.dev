@@ -6,6 +6,7 @@ import linkedin from "../../public/link.png";
 import instagram from "../../public/insta.png";
 import twitter from "../../public/twit.png";
 import facebook from "../../public/fb.png";
+import { motion } from "framer-motion";
 // const [menu, setMenu] = useState("Home");
 
 const sideSection = (props) => {
@@ -16,7 +17,15 @@ const sideSection = (props) => {
   return (
     <div>
       <div className="main flex  ">
-        <div className="left w-[25vw]   h-[100vh]  bg-gray-800 flex flex-col pt-7 items-center fixed p-[1rem]  border-zinc-950">
+        <motion.div
+          initial={{ x: -100 }}
+          animate={{ x: 0 }}
+          transition={{
+            duration: 0.6,
+            delay: 0.2,
+          }}
+          className="left w-[25vw] h-[100vh]  bg-gray-600 flex flex-col pt-7 items-center fixed p-[1rem]  border-zinc-950"
+        >
           <img
             className="rounded-full h-[200px] w-[200px] items-center object-fill object-left hover:scale-110 duration-500"
             src={logo}
@@ -76,7 +85,7 @@ const sideSection = (props) => {
               <span className="font-sans text-sm">+91 9997405528</span>
             </div>
           </div> */}
-        </div>
+        </motion.div>
         <div className="right"></div>
       </div>
     </div>
