@@ -100,21 +100,24 @@ const right = (props) => {
 
   return (
     <div>
-      <div className="main w-[75vw] flex  justify-center flex-col  pt-5   bg-slate-200">
+      <div className="main md:w-[75vw] w-100vw flex  justify-center flex-col  pt-5   bg-slate-200">
         <motion.h1
           initial={{ x: 50 }}
           animate={{ x: 0 }}
           transition={{ duration: 0.5, delay: 0.16 }}
-          className="text-2xl ml-16"
+          className="text-2xl ml-8 md:ml-16"
         >
-          Hello Everyone!👋{" "}
+          Hello Everyone!👋
+          <span className="  md:hidden border-black border-2 px-2 mr-2  ">
+            ☰
+          </span>
         </motion.h1>
         <br />
         <motion.h1
           initial={{ x: 50 }}
           animate={{ x: 0 }}
           transition={{ duration: 0.5, delay: 0.16 }}
-          className="text-5xl font-bold ml-16 "
+          className="md:text-5xl text-3xl font-bold ml-8 md:ml-16 "
         >
           {" "}
           I'm SAMAR ABBAS
@@ -123,7 +126,7 @@ const right = (props) => {
           initial={{ x: 50 }}
           animate={{ x: 0 }}
           transition={{ duration: 0.5, delay: 0.16 }}
-          className="text-2xl text-gray-600 font-serif mt-2 ml-16"
+          className="md:text-2xl text-xl text-gray-600 font-serif mt-2 ml-8 md:ml-16"
         >
           Software Developer
         </motion.h1>
@@ -131,7 +134,7 @@ const right = (props) => {
           initial={{ x: 50 }}
           animate={{ x: 0 }}
           transition={{ duration: 0.5, delay: 0.16 }}
-          className=" write text-lg mt-6 ml-16"
+          className=" write text-lg mt-6 ml-8 md:ml-16"
         >
           As a Mern Stack developer, my objective is to architect and develop
           high-quality web applications using{" "}
@@ -147,7 +150,7 @@ const right = (props) => {
           initial={{ x: 50 }}
           animate={{ x: 0 }}
           transition={{ duration: 0.5, delay: 0.16 }}
-          className="buttons mt-8 w-1/3 flex justify-between ml-16 "
+          className="buttons mt-8 md:w-1/3 w-[70vw] flex justify-between ml-8 md:ml-16 "
         >
           <button
             onClick={scroll}
@@ -162,7 +165,7 @@ const right = (props) => {
             Check Github
           </button>
         </motion.div>
-        <div className="mt-24 ml-16">
+        <div className="mt-24 ml-8 md:ml-16">
           <Projects_Section />
           {/* <Single_project /> */}
 
@@ -181,10 +184,10 @@ const right = (props) => {
             ug={ug}
           ></Project> */}
         </div>
-        <div id="skill" className="mt-24 ml-16">
+        <div id="skill" className="mt-24 ml-8 md:ml-16">
           <Skill></Skill>
         </div>
-        <div className="mt-24 ml-16">
+        <div className="mt-24 ml-8 md:ml-16">
           <Contact></Contact>
         </div>
         <div className="mt-24 ">
@@ -196,3 +199,4 @@ const right = (props) => {
 };
 
 export default right;
+// {isMobileMenuOpen === false ? "☰" : "X"}

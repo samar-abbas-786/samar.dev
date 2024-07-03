@@ -16,7 +16,7 @@ const sideSection = (props) => {
   };
   return (
     <div>
-      <div className="main flex  ">
+      <div className="md:main md:flex hidden">
         <motion.div
           initial={{ x: -100 }}
           animate={{ x: 0 }}

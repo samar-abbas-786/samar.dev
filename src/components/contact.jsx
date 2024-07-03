@@ -3,8 +3,8 @@ import React from "react";
 const contact = () => {
   return (
     <div>
-      <div className="outer flex flex-col items-center">
-        <h1 className="text-4xl font-bold">Get in Touch</h1>
+      <div className="outer w-[100vw] flex flex-col pr-10 justify-center items-center">
+        <h1 className="md:text-4xl text-3xl font-bold">Get in Touch</h1>
         <i id="contact">Reach out and let's turn ideas into action</i>
         <input type="text" placeholder="Name" />
         <input type="text" placeholder="Email" />

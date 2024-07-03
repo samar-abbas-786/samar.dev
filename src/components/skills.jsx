@@ -17,8 +17,11 @@ import react from "../../public/react.svg";
 const skills = () => {
   return (
     <div>
-      <h1 className="text-4xl font-bold mt-28">My Skills</h1>
-      <div id="skill" className="skills-container flex w-full  mt-16 flex-wrap">
+      <h1 className="md:text-4xl text-3xl font-bold mt-8 ">My Skills</h1>
+      <div
+        id="skill"
+        className="skills-container flex w-full  md:mt-16 flex-wrap"
+      >
         <img src={js} alt="" />
         <img src={react} alt="" />
         <img src={express} alt="" />
