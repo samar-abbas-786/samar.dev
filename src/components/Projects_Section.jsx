@@ -4,6 +4,7 @@ import { project } from "../Projects_Container/allProjects";
 const Projects_Section = () => {
   console.log(project.img);
   const [image, setImage] = useState(1);
+  //   const [id, setID] = useState(null);
   const handleClickNext = () => {
     {
       image === project.length ? setImage(1) : setImage(image + 1);
@@ -14,6 +15,9 @@ const Projects_Section = () => {
       image === 1 ? setImage(project.length) : setImage(image - 1);
     }
   };
+  //   const handleLive = (proj) => {
+  //     proj.live;
+  //   };
 
   return (
     <div className="  w-full justify-between items-center">
@@ -30,18 +34,18 @@ const Projects_Section = () => {
                   srcSet=""
                 />
                 <div className="btns flex justify-around  mt-2">
-                  <button className="bg-slate-100 text-black  px-4  py-[1px] border-black border-[2px] hover:bg-black hover:text-white rounded-sm font-sans text-lg">
+                  <button className="bg-violet-300 text-black  px-4  py-[1px] border-black border-[2px] hover:bg-black hover:text-white rounded-sm font-sans text-lg">
                     Code
                   </button>
                   <button
-                    onClick={() => handleClick()}
-                    className="bg-slate-100 text-black   px-4 py-[1px] border-black border-[2px] hover:bg-black hover:text-white  rounded-sm font-sans text-lg"
+                    onClick={() => handleLive(proj)}
+                    className="bg-violet-300 text-black   px-4 py-[1px] border-black border-[2px] hover:bg-black hover:text-white  rounded-sm font-sans text-lg"
                   >
                     Live
                   </button>
                 </div>
               </div>
-              <div className="description pt-2  w-[40vw]  py-16 text-xl flex flex-col font-sans px-2 text-start">
+              <div className="description  pt-2  w-[40vw]  py-16 text-xl flex flex-col font-sans px-2 text-start">
                 {proj.desc}
                 <div className="button  w-full flex space-x-10  mt-4">
                   <button
