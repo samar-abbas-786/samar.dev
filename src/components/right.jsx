@@ -101,7 +101,7 @@ const right = (props) => {
   return (
     <div>
       <div className="main md:w-[75vw] w-100vw flex  justify-center flex-col  pt-5   bg-slate-200">
-        <motion.h1
+        <motion.h1 id="Home"
           initial={{ x: 50 }}
           animate={{ x: 0 }}
           transition={{ duration: 0.5, delay: 0.16 }}
@@ -165,7 +165,7 @@ const right = (props) => {
             Check Github
           </button>
         </motion.div>
-        <div className="mt-24 ml-8 md:ml-16">
+        <div  className="mt-24 ml-8 md:ml-16">
           <Projects_Section />
           {/* <Single_project /> */}
 

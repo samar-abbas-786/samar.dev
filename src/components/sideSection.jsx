@@ -7,9 +7,10 @@ import instagram from "../../public/insta.png";
 import twitter from "../../public/twit.png";
 import facebook from "../../public/fb.png";
 import { motion } from "framer-motion";
-// const [menu, setMenu] = useState("Home");
 
 const sideSection = (props) => {
+  const [menu, setMenu] = useState("Home");
+
   const handleOnClick = (tab) => {
     props.setSelected(tab);
     props.handleClick(tab);
@@ -36,33 +37,47 @@ const sideSection = (props) => {
             <ul className="flex flex-col w-full ">
               <li
                 // className={menu === "Home" ? active : ""}
-                onClick={() => handleOnClick("Home")}
-                className="  p-2 text-lg h-max text-white font-bold w-[25vw] hover:bg-slate-200 hover:text-black hover:text-xl hover:ease-in-out duration-300"
+                onClick={() => setMenu("Home")}
+                className={`${
+                  menu === "Home" ? "sideClass" : null
+                }  p-2 text-lg h-max text-white font-bold w-[25vw] hover:bg-slate-200 hover:text-black hover:text-xl hover:ease-in-out duration-300`}
               >
                 Home
               </li>
 
               <li
+                onClick={() => setMenu("Projects")}
                 // onClick={`${props.selected === Projects && bg - black}`}
-                className="    p-2 text-lg h-max   text-white font-bold w-[25vw] hover:bg-slate-200 hover:text-black hover:text-xl hover:ease-in-out duration-300"
+                className={`${
+                  menu === "Projects" ? "sideClass" : null
+                }    p-2 text-lg h-max   text-white font-bold w-[25vw] hover:bg-slate-200 hover:text-black hover:text-xl hover:ease-in-out duration-300`}
               >
                 Projects
               </li>
               <li
-                onClick={props.home}
-                className="    p-2 text-lg h-max   text-white font-bold w-[25vw] hover:bg-slate-200 hover:text-black hover:text-xl hover:ease-in-out duration-300"
+                href="public/Samar Abbas resume.pdf"
+                onClick={() => setMenu("CV")}
+                className={` ${
+                  menu === "CV" ? "sideClass" : null
+                } p-2 text-lg h-max text-white font-bold w-[25vw] hover:bg-slate-200 hover:text-black hover:text-xl hover:ease-in-out duration-300`}
               >
-                CV
+                <a target="blank" href="public/Samar Abbas resume.pdf">
+                  CV
+                </a>
               </li>
               <li
-                onClick={props.contact}
-                className="    p-2 text-lg h-max   text-white font-bold w-[25vw] hover:bg-slate-200 hover:text-black hover:text-xl hover:ease-in-out duration-300"
+                onClick={() => setMenu("Contact")}
+                className={`${
+                  menu === "Contact" ? "sideClass" : null
+                } p-2 text-lg h-max   text-white font-bold w-[25vw] hover:bg-slate-200 hover:text-black hover:text-xl hover:ease-in-out duration-300`}
               >
                 Contact
               </li>
               <li
-                onClick={props.skill}
-                className="    p-2 text-lg h-max   text-white font-bold w-[25vw] hover:bg-slate-200 hover:text-black hover:text-xl hover:ease-in-out duration-300"
+                onClick={() => setMenu("Skills")}
+                className={` ${
+                  menu === "Skills" ? "sideClass" : null
+                } p-2 text-lg h-max   text-white font-bold w-[25vw] hover:bg-slate-200 hover:text-black hover:text-xl hover:ease-in-out duration-300`}
               >
                 Skills
               </li>
