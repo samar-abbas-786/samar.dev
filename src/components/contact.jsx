@@ -16,7 +16,12 @@ const contact = () => {
           cols="30"
           rows="5"
         ></textarea>
-        <button type="submit">Submit</button>
+        <button
+          className="bg-black mt-4 text-white px-6 py-[1px] border-black border-[2px] hover:bg-black hover:text-white  rounded-sm font-sans text-lg"
+          type="submit"
+        >
+          Submit
+        </button>
       </div>
     </div>
   );

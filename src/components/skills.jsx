@@ -20,7 +20,7 @@ const skills = () => {
       <h1 className="md:text-4xl text-3xl font-bold mt-8 ">My Skills</h1>
       <div
         id="skill"
-        className="skills-container flex w-full  md:mt-16 flex-wrap"
+        className="skills-container flex w-full  md:mt-16 flex-wrap -z-50"
       >
         <img src={js} alt="" />
         <img src={react} alt="" />

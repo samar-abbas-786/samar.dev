@@ -34,12 +34,12 @@ const Projects_Section = () => {
                   srcSet=""
                 />
                 <div className="btns flex md:justify-around space-x-20 mt-4  md:mt-2">
-                  <button className="bg-violet-300 text-black  px-4  py-[1px] border-black border-[2px] hover:bg-black hover:text-white rounded-sm font-sans text-lg">
+                  <button className="bg-black text-white px-6   py-[1px] border-black border-[2px] hover:bg-black hover:text-white rounded-sm font-sans text-lg">
                     Code
                   </button>
                   <button
                     onClick={() => handleLive(proj)}
-                    className="bg-violet-300 text-black px-4 py-[1px] border-black border-[2px] hover:bg-black hover:text-white  rounded-sm font-sans text-lg"
+                    className="bg-black text-white px-6 py-[1px] border-black border-[2px] hover:bg-black hover:text-white  rounded-sm font-sans text-lg"
                   >
                     Live
                   </button>
@@ -50,13 +50,13 @@ const Projects_Section = () => {
                 <div className="button  w-full flex space-x-10  mt-4">
                   <button
                     onClick={() => handleClickPrev()}
-                    className="bg-slate-900 ml-[1.7px] text-white rounded-sm font-mono text-lg px-5"
+                    className="bg-black text-white px-6 py-[1px] border-black border-[2px] hover:bg-black hover:text-white  rounded-sm font-sans text-lg"
                   >
                     Prev
                   </button>
                   <button
                     onClick={() => handleClickNext()}
-                    className="bg-slate-900 text-white rounded-sm  font-mono text-lg px-5"
+                    className="bg-black text-white px-6 py-[1px] border-black border-[2px] hover:bg-black hover:text-white  rounded-sm font-sans text-lg"
                   >
                     Next
                   </button>

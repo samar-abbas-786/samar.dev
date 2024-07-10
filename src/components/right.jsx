@@ -102,7 +102,7 @@ const right = (props) => {
 
   return (
     <div>
-      <div className="main md:w-[75vw] w-100vw flex  justify-center flex-col  pt-5   ">
+      <div className="main md:w-[75vw] w-100vw flex   justify-center flex-col  pt-5   ">
         <motion.h1
           id="Home"
           initial={{ x: 50 }}
@@ -113,9 +113,11 @@ const right = (props) => {
           Hello Everyone!👋
           <span
             onClick={() => handleSidebar()}
-            className="md:hidden border-black border-2 px-2 mr-2  "
+            className={`md:hidden ${
+              hide === true ? "absolute" : "fixed"
+            }  ml-[60vw] text-white bg-black border-white border-2 px-2 `}
           >
-            ☰
+            {hide ? "☰" : "X"}
           </span>
         </motion.h1>
         <br />
@@ -156,11 +158,11 @@ const right = (props) => {
           initial={{ x: 50 }}
           animate={{ x: 0 }}
           transition={{ duration: 0.5, delay: 0.16 }}
-          className="buttons mt-8 md:w-1/3 w-[70vw] flex justify-between ml-8 md:ml-16 "
+          className="buttons  mt-8 md:w-1/3 w-[90vw] flex justify-between ml-8 md:ml-16 "
         >
           <button
             onClick={scroll}
-            className=" border px-3  text-lg border-black  bg-black text-white hover:bg-neutral-700 rounded-sm h-[40px] w-max"
+            className=" border px-3  text-lg border-black  bg-black text-white hover:bg-neutral-700 rounded-sm h-[40px] w-auto"
           >
             Let's Connect
           </button>

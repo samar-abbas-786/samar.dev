@@ -39,12 +39,12 @@ const sideSection = (props) => {
             alt=""
             srcSet=""
           />
-          <div
+          {/* <div
             onClick={() => handleSidebar()}
             className="md:hidden text-red-700 absolute ml-[90%] bg-white p-2 rounded-full font-extrabold text-2xl"
           >
             X
-          </div>
+          </div> */}
           <div className="list mt-5">
             <ul className="flex flex-col w-full ">
               <li
