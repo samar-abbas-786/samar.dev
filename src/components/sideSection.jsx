@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import logo from "../../public/samf.jpg";
 
 import github from "../../public/github.png";
@@ -7,14 +7,16 @@ import instagram from "../../public/insta.png";
 import twitter from "../../public/twit.png";
 import facebook from "../../public/fb.png";
 import { motion } from "framer-motion";
+import { GlobalContext } from "../context/contextApi";
 
 const sideSection = (props) => {
-  const [menu, setMenu] = useState("Home");
+  const { menu, setMenu } = useContext(GlobalContext);
+  // const [menu, setMenu] = useState("Home");
 
-  const handleOnClick = (tab) => {
-    props.setSelected(tab);
-    props.handleClick(tab);
-  };
+  // const handleOnClick = (tab) => {
+  //   props.setSelected(tab);
+  //   props.handleClick(tab);
+  // };
   return (
     <div>
       <div className="md:main md:flex hidden">
@@ -25,13 +27,13 @@ const sideSection = (props) => {
             duration: 0.6,
             delay: 0.2,
           }}
-          className="left w-[25vw] h-[100vh]  bg-gray-600 flex flex-col pt-7 items-center fixed p-[1rem]  border-zinc-950"
+          className="left w-[25vw] h-[100vh]  bg-[#2c3656] flex flex-col pt-7 items-center fixed p-[1rem]  border-zinc-950"
         >
           <img
             className="rounded-full h-[200px] w-[200px] items-center object-fill object-left hover:scale-110 duration-500"
             src={logo}
             alt=""
-            srcset=""
+            srcSet=""
           />
           <div className="list mt-5">
             <ul className="flex flex-col w-full ">
@@ -84,11 +86,11 @@ const sideSection = (props) => {
             </ul>
           </div>
           <div className="logo flex w-full  mt-3 ">
-            <img onClick={props.link} src={linkedin} alt="" srcset="" />
-            <img onClick={props.github} src={github} alt="" srcset="" />
-            <img onClick={props.twitter} src={twitter} alt="" srcset="" />
-            <img onClick={props.insta} src={instagram} alt="" srcset="" />
-            <img onClick={props.fb} src={facebook} alt="" srcset="" />
+            <img onClick={props.link} src={linkedin} alt="" srcSet="" />
+            <img onClick={props.github} src={github} alt="" srcSet="" />
+            <img onClick={props.twitter} src={twitter} alt="" srcSet="" />
+            <img onClick={props.insta} src={instagram} alt="" srcSet="" />
+            <img onClick={props.fb} src={facebook} alt="" srcSet="" />
           </div>
           {/* <div className="emph">
             <div className="mt-2 text-sm text-red-200">
