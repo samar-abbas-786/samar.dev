@@ -95,7 +95,7 @@ const sideSection = (props) => {
               </li>
             </ul>
           </div>
-          <div className="logo flex justify-center space-x-12   w-full   mt-5 ">
+          <div className="logo flex justify-center space-x-12 w-full md:space-x-5   mt-5 ">
             <img onClick={props.link} src={linkedin} alt="" srcSet="" />
             <img onClick={props.github} src={github} alt="" srcSet="" />
             <img onClick={props.twitter} src={twitter} alt="" srcSet="" />
