@@ -115,7 +115,7 @@ const right = (props) => {
             onClick={() => handleSidebar()}
             className={`md:hidden ${
               hide === true ? "absolute" : "fixed"
-            }  ml-[60vw] text-white bg-black border-white border-2 px-2 `}
+            }  ml-60 text-white bg-black border-white border-2 px-2 `}
           >
             {hide ? "☰" : "X"}
           </span>
