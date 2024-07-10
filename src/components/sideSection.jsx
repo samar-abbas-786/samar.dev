@@ -10,7 +10,8 @@ import { motion } from "framer-motion";
 import { GlobalContext } from "../context/contextApi";
 
 const sideSection = (props) => {
-  const { menu, setMenu } = useContext(GlobalContext);
+  const { menu, setMenu, hide, Sethide, handleSidebar } =
+    useContext(GlobalContext);
   // const [menu, setMenu] = useState("Home");
 
   // const handleOnClick = (tab) => {
@@ -19,7 +20,8 @@ const sideSection = (props) => {
   // };
   return (
     <div>
-      <div className="md:main md:flex hidden">
+      <div className={`md:main md:flex ${hide ? "hidden" : "block"} md:block`}>
+        {" "}
         <motion.div
           initial={{ x: -100 }}
           animate={{ x: 0 }}
@@ -27,7 +29,7 @@ const sideSection = (props) => {
             duration: 0.6,
             delay: 0.2,
           }}
-          className="left w-[25vw] h-[100vh]  bg-[#2c3656] flex flex-col pt-7 items-center fixed p-[1rem]  border-zinc-950"
+          className="left w-[100%]   md:w-[25vw] h-[100vh]  bg-[#2c3656] flex flex-col pt-7 items-center fixed p-[1rem]  border-zinc-950"
         >
           <img
             className="rounded-full h-[200px] w-[200px] items-center object-fill object-left hover:scale-110 duration-500"
@@ -42,7 +44,7 @@ const sideSection = (props) => {
                 onClick={() => setMenu("Home")}
                 className={`${
                   menu === "Home" ? "sideClass" : null
-                }  p-2 text-lg h-max text-white font-bold w-[25vw] hover:bg-slate-200 hover:text-black hover:text-xl hover:ease-in-out duration-300`}
+                }  p-2 text-lg h-max text-white font-bold w-[100%] md:w-[25vw] hover:bg-slate-200 hover:text-black hover:text-xl hover:ease-in-out duration-300`}
               >
                 Home
               </li>

@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 // import Project from "./project";
 import Contact from "./contact";
 import Skill from "./skills";
 import Footer from "./footer";
 import Projects_Section from "./Projects_Section";
 import { motion } from "framer-motion";
+import { GlobalContext } from "../context/contextApi";
 // import Single_project from "./single-project";
 
 const right = (props) => {
+  const { hide, Sethide, handleSidebar } = useContext(GlobalContext);
   function scroll() {
     window.scrollTo({
       top: 5000,
@@ -101,14 +103,18 @@ const right = (props) => {
   return (
     <div>
       <div className="main md:w-[75vw] w-100vw flex  justify-center flex-col  pt-5   ">
-        <motion.h1 id="Home"
+        <motion.h1
+          id="Home"
           initial={{ x: 50 }}
           animate={{ x: 0 }}
           transition={{ duration: 0.5, delay: 0.16 }}
           className="text-2xl ml-8 md:ml-16"
         >
           Hello Everyone!👋
-          <span className="  md:hidden border-black border-2 px-2 mr-2  ">
+          <span
+            onClick={() => handleSidebar()}
+            className="md:hidden border-black border-2 px-2 mr-2  "
+          >
             ☰
           </span>
         </motion.h1>
@@ -165,9 +171,8 @@ const right = (props) => {
             Check Github
           </button>
         </motion.div>
-        <div  className="mt-24 ml-8 md:ml-16">
+        <div className="mt-24 ml-8 md:ml-16">
           <Projects_Section />
-          
         </div>
         <div id="skill" className="mt-24 ml-8 md:ml-16">
           <Skill></Skill>
