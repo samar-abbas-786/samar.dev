@@ -20,7 +20,9 @@ const sideSection = (props) => {
   // };
   return (
     <div>
-      <div className={`md:main md:flex ${hide ? "hidden" : "block"} md:block`}>
+      <div
+        className={`md:main md:flex ${hide ? "hidden" : "block"} md:block z-50`}
+      >
         {" "}
         <motion.div
           initial={{ x: -100 }}
@@ -29,7 +31,7 @@ const sideSection = (props) => {
             duration: 0.6,
             delay: 0.2,
           }}
-          className="left w-[100%]   md:w-[25vw] h-[100vh]  bg-[#2c3656] flex flex-col pt-7 items-center fixed p-[1rem]  border-zinc-950"
+          className="left w-[100%]   md:w-[25vw] md:h-[100vh] h-[110vh]  bg-[#2c3656] flex flex-col pt-7 items-center fixed p-[1rem]  border-zinc-950"
         >
           <img
             className="rounded-full h-[200px] w-[200px] items-center object-fill object-left hover:scale-110 duration-500"
@@ -37,6 +39,12 @@ const sideSection = (props) => {
             alt=""
             srcSet=""
           />
+          <div
+            onClick={() => handleSidebar()}
+            className="md:hidden text-red-700 absolute ml-[90%] bg-white p-2 rounded-full font-extrabold text-2xl"
+          >
+            X
+          </div>
           <div className="list mt-5">
             <ul className="flex flex-col w-full ">
               <li
@@ -44,7 +52,7 @@ const sideSection = (props) => {
                 onClick={() => setMenu("Home")}
                 className={`${
                   menu === "Home" ? "sideClass" : null
-                }  p-2 text-lg h-max text-white font-bold w-[100%] md:w-[25vw] hover:bg-slate-200 hover:text-black hover:text-xl hover:ease-in-out duration-300`}
+                }  p-2 text-lg h-max text-white  font-bold w-[100%] md:w-[25vw] hover:bg-slate-200 hover:text-black hover:text-xl hover:ease-in-out duration-300`}
               >
                 Home
               </li>
@@ -87,7 +95,7 @@ const sideSection = (props) => {
               </li>
             </ul>
           </div>
-          <div className="logo flex w-full  mt-3 ">
+          <div className="logo flex justify-center space-x-12   w-full   mt-5 ">
             <img onClick={props.link} src={linkedin} alt="" srcSet="" />
             <img onClick={props.github} src={github} alt="" srcSet="" />
             <img onClick={props.twitter} src={twitter} alt="" srcSet="" />

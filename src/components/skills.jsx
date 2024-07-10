@@ -16,7 +16,7 @@ import react from "../../public/react.svg";
 
 const skills = () => {
   return (
-    <div>
+    <div className="-z-50">
       <h1 className="md:text-4xl text-3xl font-bold mt-8 ">My Skills</h1>
       <div
         id="skill"
