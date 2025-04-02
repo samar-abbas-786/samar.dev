@@ -32,7 +32,7 @@ const Projects_Section = () => {
           {project.map((proj, index) => (
             <div
               key={proj.id}
-              className={`flex flex-col md:flex-row items-center gap-6 p-6 md:px-0 rounded-lg shadow-md bg-white ${
+              className={`flex flex-col md:flex-row items-center gap-6 p-6  rounded-lg shadow-md bg-white ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               }`}
             >
