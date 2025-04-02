@@ -94,11 +94,11 @@ const Right = () => {
         <Skill />
       </div>
 
-      <div ref={contactRef} className="  mt-12 ml-8 md:ml-16">
+      <div ref={contactRef} className="mt-12 ml-8 md:ml-16">
         <ContactCard />
       </div>
 
-      <div className="mt-24">
+      <div className="mt-12">
         <Footer />
       </div>
     </div>
