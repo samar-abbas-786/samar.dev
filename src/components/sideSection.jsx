@@ -1,122 +1,135 @@
 import React, { useContext, useState } from "react";
 import logo from "../../public/samf.jpg";
-
-import github from "../../public/github.png";
-import linkedin from "../../public/link.png";
-import instagram from "../../public/insta.png";
-import twitter from "../../public/twit.png";
-import facebook from "../../public/fb.png";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaTwitter,
+  FaFacebook,
+} from "react-icons/fa";
 import { motion } from "framer-motion";
 import { GlobalContext } from "../context/contextApi";
+import { useScroll } from "../context/ScrollContext";
 
-const sideSection = (props) => {
-  const { menu, setMenu, hide, Sethide, handleSidebar } =
-    useContext(GlobalContext);
-  // const [menu, setMenu] = useState("Home");
+const SideSection = () => {
+  const { menu, setMenu, hide } = useContext(GlobalContext);
+  const {
+    scrollToSection,
+    homeRef,
+    projectRef,
+    skillRef,
+    expRef,
+    contactRef,
+    eduRef,
+  } = useScroll();
 
-  // const handleOnClick = (tab) => {
-  //   props.setSelected(tab);
-  //   props.handleClick(tab);
-  // };
+  const [selectedMenu, setSelectedMenu] = useState("Home");
+
+  const navItems = [
+    { name: "Home", ref: homeRef },
+    { name: "Education", ref: eduRef },
+
+    { name: "Experience", ref: expRef },
+    { name: "Projects", ref: projectRef },
+    { name: "Skills", ref: skillRef },
+    { name: "Get in Touch", ref: contactRef },
+  ];
+
   return (
-    <div>
-      <div
-        className={`md:main md:flex ${hide ? "hidden" : "block"} md:block z-50`}
+    <div className={`md:flex ${hide ? "hidden" : "block"} md:block z-50`}>
+      <motion.div
+        initial={{ x: -100 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className="fixed left-0 top-0 w-full md:w-[20vw] h-screen bg-gray-100 shadow-lg flex flex-col items-center py-8"
       >
-        {" "}
-        <motion.div
-          initial={{ x: -100 }}
-          animate={{ x: 0 }}
-          transition={{
-            duration: 0.6,
-            delay: 0.2,
-          }}
-          className="left w-[100%]   md:w-[25vw] md:h-[100vh] h-[110vh]  bg-[#2c3656] flex flex-col pt-7 items-center fixed p-[1rem]  border-zinc-950"
-        >
-          <img
-            className="rounded-full h-[200px] w-[200px] items-center object-fill object-left hover:scale-110 duration-500"
-            src={logo}
-            alt=""
-            srcSet=""
-          />
-          {/* <div
-            onClick={() => handleSidebar()}
-            className="md:hidden text-red-700 absolute ml-[90%] bg-white p-2 rounded-full font-extrabold text-2xl"
-          >
-            X
-          </div> */}
-          <div className="list mt-5">
-            <ul className="flex flex-col w-full ">
-              <li
-                // className={menu === "Home" ? active : ""}
-                onClick={() => setMenu("Home")}
-                className={`${
-                  menu === "Home" ? "sideClass" : null
-                }  p-2 text-lg h-max text-white  font-bold w-[100%] md:w-[25vw] hover:bg-slate-200 hover:text-black hover:text-xl hover:ease-in-out duration-300`}
-              >
-                Home
-              </li>
+        {/* Profile Image */}
+        <img
+          className="rounded-full h-[150px] w-[150px] object-cover hover:scale-110 transition duration-500"
+          src={logo}
+          alt="Profile"
+        />
 
+        {/* Navigation Links */}
+        <nav className="mt-6 w-full">
+          <ul className="flex flex-col w-full text-center space-y-3">
+            {navItems.map((item) => (
               <li
-                onClick={() => setMenu("Projects")}
-                // onClick={`${props.selected === Projects && bg - black}`}
-                className={`${
-                  menu === "Projects" ? "sideClass" : null
-                }    p-2 text-lg h-max   text-white font-bold w-[25vw] hover:bg-slate-200 hover:text-black hover:text-xl hover:ease-in-out duration-300`}
+                key={item.name}
+                onClick={() => {
+                  setSelectedMenu(item.name);
+                  scrollToSection(item.ref);
+                }}
+                className={`p-1 text-md w-full transition-all duration-300 cursor-pointer ${
+                  selectedMenu === item.name
+                    ? "text-blue-500 rounded-lg font-semibold"
+                    : "hover:bg-gray-200 text-black"
+                }`}
               >
-                Projects
+                {item.name}
               </li>
-              <li
-                href="public/Samar Abbas resume.pdf"
-                onClick={() => setMenu("CV")}
-                className={` ${
-                  menu === "CV" ? "sideClass" : null
-                } p-2 text-lg h-max text-white font-bold w-[25vw] hover:bg-slate-200 hover:text-black hover:text-xl hover:ease-in-out duration-300`}
+            ))}
+
+            {/* CV Link */}
+            <li className="p-3 text-lg w-full transition-all duration-300 cursor-pointer hover:bg-gray-200">
+              <a
+                href="/Samar Abbas resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-red-700 underline"
               >
-                <a target="blank" href="public/Samar Abbas resume.pdf">
-                  CV
-                </a>
-              </li>
-              <li
-                onClick={() => setMenu("Contact")}
-                className={`${
-                  menu === "Contact" ? "sideClass" : null
-                } p-2 text-lg h-max   text-white font-bold w-[25vw] hover:bg-slate-200 hover:text-black hover:text-xl hover:ease-in-out duration-300`}
-              >
-                Contact
-              </li>
-              <li
-                onClick={() => setMenu("Skills")}
-                className={` ${
-                  menu === "Skills" ? "sideClass" : null
-                } p-2 text-lg h-max   text-white font-bold w-[25vw] hover:bg-slate-200 hover:text-black hover:text-xl hover:ease-in-out duration-300`}
-              >
-                Skills
-              </li>
-            </ul>
-          </div>
-          <div className="logo flex justify-center space-x-12 w-full md:space-x-5   mt-5 ">
-            <img onClick={props.link} src={linkedin} alt="" srcSet="" />
-            <img onClick={props.github} src={github} alt="" srcSet="" />
-            <img onClick={props.twitter} src={twitter} alt="" srcSet="" />
-            <img onClick={props.insta} src={instagram} alt="" srcSet="" />
-            <img onClick={props.fb} src={facebook} alt="" srcSet="" />
-          </div>
-          {/* <div className="emph">
-            <div className="mt-2 text-sm text-red-200">
-              <b className="text-black">Email: </b>
-              <span className="font-sans ">samarabbas172003@gmail.com</span>
-            </div>
-            <div className="text-red-200 ">
-              <b className="text-sm text-black">Phone No.</b>
-              <span className="font-sans text-sm">+91 9997405528</span>
-            </div>
-          </div> */}
-        </motion.div>
-        <div className="right"></div>
-      </div>
+                Resume
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        {/* Social Media Links */}
+        <div className="flex space-x-5 mt-6">
+          <a
+            href="https://linkedin.com/in/samarabbas"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-700 text-2xl hover:scale-125 transition"
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            href="https://github.com/samarabbas"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-900 text-2xl hover:scale-125 transition"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://twitter.com/samarabbas"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 text-2xl hover:scale-125 transition"
+          >
+            <FaTwitter />
+          </a>
+          <a
+            href="https://instagram.com/samarabbas"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-pink-600 text-2xl hover:scale-125 transition"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href="https://facebook.com/samarabbas"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 text-2xl hover:scale-125 transition"
+          >
+            <FaFacebook />
+          </a>
+        </div>
+      </motion.div>
     </div>
   );
 };
 
-export default sideSection;
+export default SideSection;

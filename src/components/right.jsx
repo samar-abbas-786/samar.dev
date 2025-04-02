@@ -1,194 +1,108 @@
-import React, { useContext } from "react";
-// import Project from "./project";
+import React from "react";
+import { useScroll } from "../context/ScrollContext";
+import Projects_Section from "./Projects_Section";
 import Contact from "./contact";
 import Skill from "./skills";
-import Footer from "./footer";
-import Projects_Section from "./Projects_Section";
 import { motion } from "framer-motion";
-import { GlobalContext } from "../context/contextApi";
-// import Single_project from "./single-project";
+import { FaEnvelope, FaPhone } from "react-icons/fa"; // Importing icons
+import Footer from "./footer";
+import { ExperiencePage } from "./experiencePage";
+import { ContactCard } from "./contactCard";
+import EducationPage from "./education";
 
-const right = (props) => {
-  const { hide, Sethide, handleSidebar } = useContext(GlobalContext);
-  function scroll() {
-    window.scrollTo({
-      top: 5000,
-      behavior: "smooth",
-    });
-  }
-  function avs() {
-    const link = "https://aligarian-s-visionary-classes-wakh.vercel.app/";
-    window.open(link, "_blank");
-  }
-
-  function careSync() {
-    const link = "https://caresync2-3.onrender.com";
-    window.open(link, "_blank");
-  }
-
-  function gym() {
-    const link = "https://gym-website-virid.vercel.app/";
-    window.open(link, "_blank");
-  }
-
-  function UniUnity() {
-    alert("This Website is under development");
-  }
-
-  function school() {
-    alert("This Website is under development");
-  }
-
-  function survey() {
-    const link = "https://survey-payu.vercel.app/";
-    window.open(link, "_blank");
-  }
-
-  // Github Functions
-  function avsg() {
-    const link =
-      "https://github.com/samar-abbas-786/Aligarian-s-Visionary-Classes";
-    window.open(link, "_blank");
-  }
-  function caresyncg() {
-    const link = "https://github.com/samar-abbas-786/CareSync2";
-    window.open(link, "_blank");
-  }
-  function gymg() {
-    const link = "https://github.com/samar-abbas-786/Gym-Website";
-    window.open(link, "_blank");
-  }
-  function ug() {
-    const link = "https://github.com/samar-abbas-786/UniUnity";
-    window.open(link, "_blank");
-  }
-  function schg() {
-    const link = "https://github.com/samar-abbas-786/MDE-school";
-    window.open(link, "_blank");
-  }
-  function syg() {
-    const link = "https://github.com/samar-abbas-786/SURVEY_PAYU";
-    window.open(link, "_blank");
-  }
-
-  // function for links on left side
-
-  function home() {
-    const home = document.getElementById("home");
-    if (home) {
-      home.scrollIntoView({ behavior: "smooth" });
-    }
-  }
-
-  function project() {
-    const project = document.getElementById("project");
-    if (project) {
-      project.scrollIntoView({ behavior: "smooth" });
-    }
-  }
-
-  function contact() {
-    const contact = document.getElementById("contact");
-    if (contact) {
-      contact.scrollIntoView({ behavior: "smooth" });
-    }
-  }
-  function skill() {
-    const skill = document.getElementById("skill");
-    if (skill) {
-      skill.scrollIntoView({ behavior: "smooth" });
-    }
-  }
+const Right = () => {
+  const { homeRef, projectRef, skillRef, expRef, contactRef, eduRef } =
+    useScroll();
 
   return (
-    <div>
-      <div className="main md:w-[75vw] w-100vw flex   justify-center flex-col  pt-5   ">
-        <motion.h1
-          id="Home"
-          initial={{ x: 50 }}
-          animate={{ x: 0 }}
-          transition={{ duration: 0.5, delay: 0.16 }}
-          className="text-2xl ml-8 md:ml-16"
+    <div className="main md:w-[80vw] w-full flex flex-col bg-gray-100 pt-5">
+      <h1
+        className="text-3xl  text-center md:text-left ml-8 md:ml-20"
+        ref={homeRef}
+      >
+        Hello Everyone!👋
+      </h1>
+      <h1 className="md:text-4xl text-center md:text-left  mt-3 text-3xl font-bold ml-8 md:ml-20">
+        I'm SAMAR ABBAS
+      </h1>
+      <motion.p
+        initial={{ x: 50 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 0.5, delay: 0.16 }}
+        className="mt-6 ml-8 md:ml-16 leading-relaxed px-3 md:px-8 text-lg"
+      >
+        As a <b className="text-stone-700">Software Engineer</b>, my goal is to
+        design and develop efficient, scalable, and high-performance
+        applications by leveraging my expertise in{" "}
+        <b className="text-stone-700">Data Structures & Algorithms (DSA)</b> and
+        modern software development. I strive to build robust, optimized
+        solutions, enhance user experiences, and contribute to innovation in
+        technology. Let's create impactful software together.
+      </motion.p>
+      {/* <div className="flex gap-6 mt-6 ml-8 md:ml-16">
+        {/* Resume Download Button */}
+      {/* <a
+          href="/Samar_Abbas_Resume.pdf" // Update with actual resume link
+          download
+          className="px-6 py-3  bg-slate-950 text-white font-semibold rounded-lg shadow-md hover:bg-slate-700 transition duration-300"
         >
-          Hello Everyone!👋
-          <span
-            onClick={() => handleSidebar()}
-            className={`md:hidden ${
-              hide === true ? "absolute" : "fixed"
-            }  ml-60 text-white bg-black border-white border-2 px-2 `}
+          📄 Resume Download
+        </a>
+
+        {/* Let's Connect Button */}
+      {/* <a
+        href="#contact" // Update with actual section or link
+        className="px-6 py-3 bg-slate-900 text-white font-semibold rounded-lg shadow-md hover:bg-slate-700 transition duration-300"
+      >
+        🔗 Let's Connect
+      </a> */}
+      {/* </div> */}
+
+      {/* Contact Information */}
+      {/* <div className="flex flex-col sm:flex-row items-start gap-6 ml-8 md:ml-16 mt-1 rounded-lg  w-fit">
+        <div className="flex items-center gap-3">
+          <FaEnvelope className="text-blue-600 text-xl" />
+          <a
+            href="mailto:samarabbas@example.com"
+            className="text-gray-800 font-medium hover:underline"
           >
-            {hide ? "☰" : "X"}
-          </span>
-        </motion.h1>
-        <br />
-        <motion.h1
-          initial={{ x: 50 }}
-          animate={{ x: 0 }}
-          transition={{ duration: 0.5, delay: 0.16 }}
-          className="md:text-5xl text-3xl font-bold ml-8 md:ml-16 "
-        >
-          {" "}
-          I'm SAMAR ABBAS
-        </motion.h1>
-        <motion.h1
-          initial={{ x: 50 }}
-          animate={{ x: 0 }}
-          transition={{ duration: 0.5, delay: 0.16 }}
-          className="md:text-2xl text-xl text-gray-600 font-serif mt-2 ml-8 md:ml-16"
-        >
-          Software Developer
-        </motion.h1>
-        <motion.p
-          initial={{ x: 50 }}
-          animate={{ x: 0 }}
-          transition={{ duration: 0.5, delay: 0.16 }}
-          className=" write text-lg mt-6 ml-8 md:ml-16"
-        >
-          As a Mern Stack developer, my objective is to architect and develop
-          high-quality web applications using{" "}
-          <b className="text-stone-700">
-            {" "}
-            MongoDB, Express.js, React, and Node.js.
-          </b>{" "}
-          I aim to contribute my expertise to create seamless user experiences,
-          drive business growth, and stay updated with the latest technologies.
-          Let's build the future of web development together.
-        </motion.p>
-        <motion.div
-          initial={{ x: 50 }}
-          animate={{ x: 0 }}
-          transition={{ duration: 0.5, delay: 0.16 }}
-          className="buttons  mt-8 md:w-1/3 w-[90vw] flex justify-between ml-8 md:ml-16 "
-        >
-          <button
-            onClick={scroll}
-            className=" border px-3  text-lg border-black  bg-black text-white hover:bg-neutral-700 rounded-sm h-[40px] w-auto"
+            samarabbas@example.com
+          </a>
+        </div>
+        <div className="flex items-center gap-3">
+          <FaPhone className="text-green-600 text-xl" />
+          <a
+            href="tel:+1234567890"
+            className="text-gray-800 font-medium hover:underline"
           >
-            Let's Connect
-          </button>
-          <button
-            onClick={props.github}
-            className=" border px-3 text-lg border-black hover:bg-black hover:text-white hover:ease-in-out hover:scale-105 duration-200 rounded-sm h-[40px] w-max"
-          >
-            Check Github
-          </button>
-        </motion.div>
-        <div className="mt-24 ml-8 md:ml-16">
-          <Projects_Section />
+            +123 456 7890
+          </a>
         </div>
-        <div id="skill" className="mt-24 ml-8 md:ml-16">
-          <Skill></Skill>
-        </div>
-        <div className="mt-24 ml-8 md:ml-16">
-          <Contact></Contact>
-        </div>
-        <div className="mt-24 ">
-          <Footer></Footer>
-        </div>
+      </div> */}
+
+      <div ref={eduRef} className=" ml-8 md:ml-16">
+        <EducationPage />
+      </div>
+      <div ref={expRef} className="  ml-8 md:ml-16">
+        <ExperiencePage />
+      </div>
+      <div ref={projectRef} className="  ml-8 md:ml-16">
+        <Projects_Section />
+      </div>
+
+      <div ref={skillRef} className="  ml-8 md:ml-16">
+        <Skill />
+      </div>
+
+      <div ref={contactRef} className="  mt-12 ml-8 md:ml-16">
+        <ContactCard />
+      </div>
+
+      <div className="mt-24">
+        <Footer />
       </div>
     </div>
   );
 };
 
-export default right;
-// {isMobileMenuOpen === false ? "☰" : "X"}
+export default Right;

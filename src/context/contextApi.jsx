@@ -9,9 +9,9 @@ export function GlobalState({ children }) {
   const [menu, setMenu] = useState("Home");
   const [hide, Sethide] = useState(true);
 
-    function handleSidebar() {
+  function handleSidebar() {
     try {
-        console.log("clicked")
+      console.log("clicked");
       Sethide(!hide);
     } catch (e) {
       console.log("Error Occured", e);
