@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import logo from "../assets/images/samf.jpg";
+import pdf from "../assets/images/Samr.pdf";
 import {
   FaGithub,
   FaLinkedin,
@@ -73,7 +74,7 @@ const SideSection = () => {
             {/* CV Link */}
             <li className="p-3 text-lg w-full transition-all duration-300 cursor-pointer hover:bg-gray-200">
               <a
-                href="/Samar Abbas resume.pdf"
+                href={pdf}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-red-700 underline"
