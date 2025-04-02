@@ -16,20 +16,17 @@ const Right = () => {
 
   return (
     <div className="main md:w-[80vw] w-full flex flex-col bg-gray-100 pt-5">
-      <h1
-        className="text-3xl  text-center md:text-left ml-8 md:ml-20"
-        ref={homeRef}
-      >
+      <h1 className="text-3xl ml-8 md:ml-20" ref={homeRef}>
         Hello Everyone!👋
       </h1>
-      <h1 className="md:text-4xl text-center md:text-left  mt-3 text-3xl font-bold ml-8 md:ml-20">
+      <h1 className="md:text-4xl   mt-3 text-3xl font-bold ml-8 md:ml-20">
         I'm SAMAR ABBAS
       </h1>
       <motion.p
         initial={{ x: 50 }}
         animate={{ x: 0 }}
         transition={{ duration: 0.5, delay: 0.16 }}
-        className="mt-6 ml-8 md:ml-16 leading-relaxed px-3 md:px-8 text-lg"
+        className="mt-6 ml-4 md:ml-16 leading-relaxed px-3 md:px-8 text-lg"
       >
         As a <b className="text-stone-700">Software Engineer</b>, my goal is to
         design and develop efficient, scalable, and high-performance
@@ -39,7 +36,7 @@ const Right = () => {
         solutions, enhance user experiences, and contribute to innovation in
         technology. Let's create impactful software together.
       </motion.p>
-      {/* <div className="flex gap-6 mt-6 ml-8 md:ml-16">
+      {/* <div className="flex gap-6 mt-6 ml-4 md:ml-16">
         {/* Resume Download Button */}
       {/* <a
           href="/Samar_Abbas_Resume.pdf" // Update with actual resume link
@@ -80,21 +77,21 @@ const Right = () => {
         </div>
       </div> */}
 
-      <div ref={eduRef} className=" ml-8 md:ml-16">
+      <div ref={eduRef} className=" ml-4 md:ml-16">
         <EducationPage />
       </div>
-      <div ref={expRef} className="  ml-8 md:ml-16">
+      <div ref={expRef} className="  ml-4 md:ml-16">
         <ExperiencePage />
       </div>
-      <div ref={projectRef} className="  ml-8 md:ml-16">
+      <div ref={projectRef} className="  ml-4 md:ml-16">
         <Projects_Section />
       </div>
 
-      <div ref={skillRef} className="  ml-8 md:ml-16">
+      <div ref={skillRef} className="  ml-4 md:ml-16">
         <Skill />
       </div>
 
-      <div ref={contactRef} className="mt-12 ml-8 md:ml-16">
+      <div ref={contactRef} className="mt-12 ml-4 md:ml-16">
         <ContactCard />
       </div>
 
