@@ -1,4 +1,6 @@
 import React from "react";
+import Img11 from "../assets/images/amulate.jpg";
+import Img12 from "../assets/images/int.jpg";
 
 const experiences = [
   {
@@ -19,7 +21,7 @@ const experiences = [
     ],
     projectLink:
       "https://github.com/samar-abbas-786/Verification-of-Android-OS-enabled-Devices",
-    image: "../public/amulate.jpg", // Add your image path
+    image: Img11, // Add your image path
   },
   {
     id: 1,
@@ -40,7 +42,7 @@ const experiences = [
     ],
     projectLink:
       "https://play.google.com/store/apps/details?id=com.onlinetailoring&hl=en_IN",
-    image: "../public/int.jpg", // Add your image path
+    image: Img12, // Add your image path
   },
 ];
 

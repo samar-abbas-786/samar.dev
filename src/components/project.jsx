@@ -1,10 +1,10 @@
 import React from "react";
-import avs from "../../public/avs.png";
-import survey from "../../public/survey - Copy.png";
-import gym from "../../public/gym.png";
-import caresync from "../../public/caresync.png";
-import mdes from "../../public/mdes.png";
-import UniUnity from "../../public/UniUnity.png";
+import avs from "../../images/avs.png";
+import survey from "../../images/survey - Copy.png";
+import gym from "../../images/gym.png";
+import caresync from "../../images/caresync.png";
+import mdes from "../../images/mdes.png";
+import UniUnity from "../../images/UniUnity.png";
 
 const project = (props) => {
   return (

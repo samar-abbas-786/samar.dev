@@ -13,7 +13,7 @@ const educationData = [
   },
   {
     title: "Senior Secondary School 🎓",
-    college: "Delhi Public School, Roorkee",
+    college: "Delhi images School, Roorkee",
     duration: "2019 - 2021",
     cpi: "80% (12th Grade)",
     description:

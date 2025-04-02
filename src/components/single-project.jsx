@@ -1,5 +1,5 @@
 import React from "react";
-import { testing } from "../../public/campus.png";
+import { testing } from "../../images/campus.png";
 
 export const Single_project = () => {
   return (

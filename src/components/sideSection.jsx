@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import logo from "../../public/samf.jpg";
+import logo from "../assets/images/samf.jpg";
 import {
   FaGithub,
   FaLinkedin,
