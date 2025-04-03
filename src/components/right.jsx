@@ -19,14 +19,14 @@ const Right = () => {
       <h1 className="text-3xl ml-8 md:ml-20" ref={homeRef}>
         Hello Everyone!👋
       </h1>
-      <h1 className="md:text-4xl   mt-3 text-3xl font-bold ml-8 md:ml-20">
+      <h1 className="md:text-4xl mt-3 text-3xl font-bold ml-8 md:ml-20">
         I'm SAMAR ABBAS
       </h1>
       <motion.p
         initial={{ x: 50 }}
         animate={{ x: 0 }}
         transition={{ duration: 0.5, delay: 0.16 }}
-        className="mt-6 ml-4 md:ml-16 leading-relaxed px-3 md:px-8 text-lg"
+        className="mt-6 ml-4 md:ml-16 leading-relaxed px-3 md:px-8 text-sm md:text-lg"
       >
         As a <b className="text-stone-700">Software Engineer</b>, my goal is to
         design and develop efficient, scalable, and high-performance
