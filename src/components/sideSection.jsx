@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import logo from "../assets/images/samf.jpg";
+import logo from "../assets/images/samred.jpg";
 import pdf from "../assets/images/Samr.pdf";
 import {
   FaGithub,
