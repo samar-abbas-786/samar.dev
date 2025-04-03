@@ -32,9 +32,10 @@ const Right = () => {
         design and develop efficient, scalable, and high-performance
         applications by leveraging my expertise in{" "}
         <b className="text-stone-700">Data Structures & Algorithms (DSA)</b> and
-        modern software development. I strive to build robust, optimized
-        solutions, enhance user experiences, and contribute to innovation in
-        technology. Let's create impactful software together.
+        modern <b className="text-stone-700">software development</b>. I strive
+        to build robust, optimized solutions, enhance user experiences, and
+        contribute to innovation in technology. Let's create impactful software
+        together.
       </motion.p>
       {/* <div className="flex gap-6 mt-6 ml-4 md:ml-16">
         {/* Resume Download Button */}

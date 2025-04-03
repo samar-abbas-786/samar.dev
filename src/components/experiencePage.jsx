@@ -71,7 +71,7 @@ export const ExperiencePage = () => {
             </div>
 
             {/* Text Section */}
-            <div className="md:w-1/2 text-center md:text-left">
+            <div className="md:w-1/2  md:text-left">
               <h2 className="text-2xl font-semibold text-gray-900">
                 {exp.title}
               </h2>

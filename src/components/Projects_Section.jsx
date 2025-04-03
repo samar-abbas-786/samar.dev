@@ -46,7 +46,7 @@ const Projects_Section = () => {
               </div>
 
               {/* Project Details */}
-              <div className="md:w-1/2 text-center md:text-left">
+              <div className="md:w-1/2  md:text-left">
                 <h2 className="text-2xl font-semibold text-gray-900">
                   {proj.title}
                 </h2>
