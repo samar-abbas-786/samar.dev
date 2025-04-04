@@ -69,7 +69,7 @@ const SideSection = () => {
                 className={`p-2 text-md w-full cursor-pointer transition-all duration-300 ${
                   selectedMenu === item.name
                     ? "text-blue-500 font-semibold  rounded-md dark:text-blue-800"
-                    : "hover:bg-gray-200 dark:hover:bg-blue-100"
+                    : "hover:scale-110"
                 }`}
               >
                 {item.name}
