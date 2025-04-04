@@ -1,5 +1,5 @@
 import React from "react";
-import Img11 from "../assets/images/amulate.jpg";
+import Img11 from "../assets/images/Amulate1.jpg";
 import Img12 from "../assets/images/int.jpg";
 
 const experiences = [
@@ -66,7 +66,7 @@ export const ExperiencePage = () => {
               <img
                 src={exp.image}
                 alt={exp.title}
-                className="rounded-lg shadow-md w-full object-cover h-64"
+                className="rounded-lg shadow-md w-full object-fit h-64"
               />
             </div>
 
