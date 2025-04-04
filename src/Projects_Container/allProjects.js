@@ -1,6 +1,6 @@
 import Img1 from "../assets/images/eduPI.png";
 import Img2 from "../assets/images/artify.png";
-import Img3 from "../assets/images/campus.png";
+import Img3 from "../assets/images/newCampus.png";
 import Img4 from "../assets/images/slotify.png";
 import Img5 from "../assets/images/caresync.png";
 
