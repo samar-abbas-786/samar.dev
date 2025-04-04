@@ -1,4 +1,7 @@
 import React from "react";
+import { useScroll } from "../context/ScrollContext";
+
+// Importing skill icons
 import js from "../assets/images/js.svg";
 import nodejs from "../assets/images/nodejs.svg";
 import mongodb from "../assets/images/mongodb.svg";
@@ -39,9 +42,17 @@ const skillsData = [
 ];
 
 const Skills = () => {
+  const { dark } = useScroll();
+
   return (
-    <div className="bg-white p-8 w-[95%] rounded-md shadow-md text-center">
-      <h1 className="md:text-4xl text-3xl font-bold text-gray-800 mb-10">
+    <div
+      className={`p-8 w-[95%] rounded-md shadow-md mx-auto my-10 transition-colors duration-500 ${
+        dark
+          ? "bg-gradient-to-tr from-[#000000] via-[#101010] to-[#1a1a1a] text-white"
+          : "bg-white text-gray-800"
+      }`}
+    >
+      <h1 className="md:text-4xl text-3xl font-bold mb-10 text-center">
         My Skills
       </h1>
 
@@ -49,10 +60,18 @@ const Skills = () => {
         {skillsData.map((skill, index) => (
           <div
             key={index}
-            className="flex flex-col items-center p-3 bg-gray-100 rounded-lg shadow-sm hover:shadow-md transition duration-300"
+            className={`flex flex-col items-center p-3 rounded-lg transition duration-300 shadow-sm hover:shadow-md ${
+              dark ? "bg-white/10 hover:bg-white/20" : "bg-gray-100"
+            }`}
           >
             <img src={skill.icon} alt={skill.name} className="w-12 h-12 mb-1" />
-            <p className="text-gray-700 text-sm font-medium">{skill.name}</p>
+            <p
+              className={`text-sm font-medium ${
+                dark ? "text-gray-200" : "text-gray-700"
+              }`}
+            >
+              {skill.name}
+            </p>
           </div>
         ))}
       </div>

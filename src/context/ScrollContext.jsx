@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useRef } from "react";
+import React, { createContext, useContext, useState, useRef } from "react";
 
 const ScrollContext = createContext();
 
@@ -10,7 +10,7 @@ export const ScrollProvider = ({ children }) => {
   const contactRef = useRef(null);
   const eduRef = useRef(null);
 
-
+  const [dark, setDark] = useState(false);
 
   const scrollToSection = (sectionRef) => {
     if (sectionRef && sectionRef.current) {
@@ -20,7 +20,17 @@ export const ScrollProvider = ({ children }) => {
 
   return (
     <ScrollContext.Provider
-      value={{ homeRef, projectRef, skillRef, expRef,contactRef,eduRef, scrollToSection }}
+      value={{
+        homeRef,
+        projectRef,
+        skillRef,
+        expRef,
+        contactRef,
+        eduRef,
+        scrollToSection,
+        dark,
+        setDark,
+      }}
     >
       {children}
     </ScrollContext.Provider>
