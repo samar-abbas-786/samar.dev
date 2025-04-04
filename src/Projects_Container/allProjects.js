@@ -30,7 +30,7 @@ export const project = [
     url: "https://campus-bazaar.onrender.com/",
     img: Img3,
     desc: "Introducing Campus Bazaar: Simplify college life with 𝘼𝙙𝙙 𝙄𝙩𝙚𝙢𝙨 to list and sell items, 𝑺𝙚𝒍𝙡 𝙄𝒕𝙚𝙢𝙨 for transactions, 𝙍𝙚𝙣𝙩 𝙄𝙩𝙚𝙢𝙨 for rentals, and 𝙂𝙞𝙫𝙚 𝙎𝙪𝙜𝙜𝙚𝙨𝙩𝙞𝙤𝙣𝙨 to shape our platform. Join 𝗖𝗮𝗺𝗽𝘂𝘀 𝗕𝗮𝘇𝗮𝗮𝗿 for an intuitive, hassle-free experience and discover campus connectivity today.",
-    live: "https://campus-bazaar.onrender.com/",
+    live: "https://campus-bazaar-z22g.onrender.com",
     code: "https://github.com/samar-abbas-786/Campus-Bazaar",
     //https://campus-bazaar.onrender.com/
   },

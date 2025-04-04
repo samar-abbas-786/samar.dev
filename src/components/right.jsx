@@ -4,7 +4,7 @@ import Projects_Section from "./Projects_Section";
 import Contact from "./contact";
 import Skill from "./skills";
 import { motion } from "framer-motion";
-import { FaEnvelope, FaPhone } from "react-icons/fa"; // Importing icons
+import { FaEnvelope, FaPhone } from "react-icons/fa"; 
 import Footer from "./footer";
 import { ExperiencePage } from "./experiencePage";
 import { ContactCard } from "./contactCard";
