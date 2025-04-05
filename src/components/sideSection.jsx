@@ -66,7 +66,7 @@ const SideSection = () => {
                   setSelectedMenu(item.name);
                   scrollToSection(item.ref);
                 }}
-                className={`p-2 text-md w-full cursor-pointer transition-all duration-300 ${
+                className={`p-1 text-md w-full cursor-pointer transition-all duration-300 ${
                   selectedMenu === item.name
                     ? "text-blue-500 font-semibold  rounded-md dark:text-blue-800"
                     : "hover:scale-110"
@@ -105,7 +105,9 @@ const SideSection = () => {
             href="https://github.com/samarabbas"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-900 dark:text-white text-2xl hover:scale-125 transition"
+            className={`${
+              dark ? "text-white" : "text-gray-900"
+            }  text-2xl hover:scale-125 transition`}
             aria-label="GitHub"
           >
             <FaGithub />
