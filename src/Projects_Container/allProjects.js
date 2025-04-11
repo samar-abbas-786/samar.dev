@@ -53,4 +53,13 @@ export const project = [
     live: "https://caresync2-3.onrender.com",
     code: "https://github.com/samar-abbas-786/CareSync2",
   },
+  // {
+  //   id: 6,
+  //   title: "Online Notice Board",
+  //   url: "https://notice-board-vx95.onrender.com",
+  //   img: Img5,
+  //   desc: "CareSync,a Heathcare Website, born from a hackathon, integrates a disease detection system with tools to find nearby doctors, hospitals, and pharmacies. It simplifies healthcare access by providing timely information and seamless navigation for medical care and pharmaceutical needs.",
+  //   live: "https://caresync2-3.onrender.com",
+  //   code: "https://github.com/samar-abbas-786/CareSync2",
+  // },
 ];

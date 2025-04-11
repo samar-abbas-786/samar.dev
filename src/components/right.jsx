@@ -70,22 +70,16 @@ const Right = () => {
         transition={{ duration: 0.5, delay: 0.16 }}
         className="mt-6 ml-4 md:ml-16 leading-relaxed px-3 md:px-8 text-sm md:text-lg"
       >
-        As a{" "}
+        I'm a{" "}
         <b className={dark ? "text-white" : "text-stone-700"}>
           Software Engineer
-        </b>
-        , my goal is to design and develop efficient, scalable, and
-        high-performance applications by leveraging my expertise in{" "}
-        <b className={dark ? "text-white" : "text-stone-700"}>
-          Data Structures & Algorithms (DSA)
         </b>{" "}
-        and modern{" "}
+        focused on building scalable, high-performance apps using{" "}
+        <b className={dark ? "text-white" : "text-stone-700"}>DSA</b> and modern{" "}
         <b className={dark ? "text-white" : "text-stone-700"}>
-          software development
+          development practices
         </b>
-        . I strive to build robust, optimized solutions, enhance user
-        experiences, and contribute to innovation in technology. Let's create
-        impactful software together.
+        . Let's build something impactful together.
       </motion.p>
 
       {/* Sections */}
