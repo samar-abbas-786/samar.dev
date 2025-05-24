@@ -93,7 +93,7 @@ const SideSection = () => {
         {/* Social Media Links */}
         <div className="flex space-x-5 mt-6">
           <a
-            href="https://linkedin.com/in/samarabbas"
+            href="https://linkedin.com/in/samar-abbas-a1ab4625a"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-700 text-2xl hover:scale-125 transition"
@@ -102,7 +102,7 @@ const SideSection = () => {
             <FaLinkedin />
           </a>
           <a
-            href="https://github.com/samarabbas"
+            href="https://github.com/samar-abbas-786"
             target="_blank"
             rel="noopener noreferrer"
             className={`${
@@ -113,7 +113,7 @@ const SideSection = () => {
             <FaGithub />
           </a>
           <a
-            href="https://twitter.com/samarabbas"
+            href="https://x.com/SamarAb65178114"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 text-2xl hover:scale-125 transition"
@@ -122,7 +122,7 @@ const SideSection = () => {
             <FaTwitter />
           </a>
           <a
-            href="https://instagram.com/samarabbas"
+            href="https://instagram.com/samar_abbas_786"
             target="_blank"
             rel="noopener noreferrer"
             className="text-pink-600 text-2xl hover:scale-125 transition"
@@ -131,7 +131,7 @@ const SideSection = () => {
             <FaInstagram />
           </a>
           <a
-            href="https://facebook.com/samarabbas"
+            href="https://www.facebook.com/samar.naqvi.568/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 text-2xl hover:scale-125 transition"
