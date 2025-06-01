@@ -20,6 +20,8 @@ import kubernetes from "../assets/images/Kubernetes.svg";
 import nextjs from "../assets/images/NextJS-Dark.svg";
 import react from "../assets/images/react.svg";
 import firebase from "../assets/images/Firebase-Dark.svg";
+import Postgre from "../assets/images/PostgreSQL-Dark.svg";
+import Prisma from "../assets/images/Prisma.svg";
 
 const skillsData = [
   { name: "C++", icon: cpp },
@@ -30,6 +32,9 @@ const skillsData = [
   { name: "NextJS", icon: nextjs },
   { name: "Express.js", icon: express },
   { name: "Node.js", icon: nodejs },
+  { name: "PostgreSQL", icon: Postgre },
+  { name: "Prisma ORM", icon: Prisma },
+
   { name: "MongoDB", icon: mongodb },
   { name: "Tailwind CSS", icon: tailwind },
   { name: "CSS", icon: css },

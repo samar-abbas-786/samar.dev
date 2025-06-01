@@ -3,10 +3,20 @@ import Img2 from "../assets/images/artify.png";
 import Img3 from "../assets/images/newCampus.png";
 import Img4 from "../assets/images/slotify.png";
 import Img5 from "../assets/images/caresync.png";
+import Img6 from "../assets/images/TubeGate.png";
 
 export const project = [
   {
     id: 1,
+    title: "TubeGate",
+    url: "",
+    img: Img6,
+    desc: "Built an automated YouTube publishing platform with secure OAuth integration, allowing users to link their channels and publish videos with a single click. Editors upload content, auto-fill metadata, and hand off videos to creators. The platform ensures seamless collaboration, compliance with YouTube policies, and streamlines the end-to-end publishing workflow.",
+    live: "https://tube-mate-revolution.vercel.app/",
+    code: "https://github.com/samar-abbas-786/TubeMate",
+  },
+  {
+    id: 2,
     title: "EduPI",
     url: "",
     img: Img1,
@@ -15,7 +25,7 @@ export const project = [
     code: "https://github.com/samar-abbas-786/Minor_Project",
   },
   {
-    id: 2,
+    id: 3,
     title: "Artify",
     url: "https://artify-samar.vercel.app/",
     img: Img2,
@@ -25,7 +35,7 @@ export const project = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: "Campus Bazaar",
     url: "https://campus-bazaar.onrender.com/",
     img: Img3,
@@ -35,7 +45,7 @@ export const project = [
     //https://campus-bazaar.onrender.com/
   },
   {
-    id: 4,
+    id: 5,
     title: "Slotify",
     url: "gym-website-virid.vercel.app",
     img: Img4,
@@ -45,7 +55,7 @@ export const project = [
   },
 
   {
-    id: 5,
+    id: 6,
     title: "CareSync",
     url: "https://caresync2-3.onrender.com",
     img: Img5,
