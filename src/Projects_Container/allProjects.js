@@ -4,6 +4,8 @@ import Img3 from "../assets/images/newCampus.png";
 import Img4 from "../assets/images/slotify.png";
 import Img5 from "../assets/images/caresync.png";
 import Img6 from "../assets/images/TubeGate.png";
+import Img7 from "../assets/images/notice.png";
+import Img8 from "../assets/images/thought.png";
 
 export const project = [
   {
@@ -63,13 +65,22 @@ export const project = [
     live: "https://caresync2-3.onrender.com",
     code: "https://github.com/samar-abbas-786/CareSync2",
   },
-  // {
-  //   id: 6,
-  //   title: "Online Notice Board",
-  //   url: "https://notice-board-vx95.onrender.com",
-  //   img: Img5,
-  //   desc: "CareSync,a Heathcare Website, born from a hackathon, integrates a disease detection system with tools to find nearby doctors, hospitals, and pharmacies. It simplifies healthcare access by providing timely information and seamless navigation for medical care and pharmaceutical needs.",
-  //   live: "https://caresync2-3.onrender.com",
-  //   code: "https://github.com/samar-abbas-786/CareSync2",
-  // },
+  {
+    id: 7,
+    title: "Online Notice Board",
+    url: "https://notice-board-vx95.onrender.com",
+    img: Img7,
+    desc: "Built a digital Notice Board system with distinct roles: Student, Teacher, and Admin. Students can access and download notices or attachments. Teachers can upload and manage their own posts. Admins handle user management and have full control over all notices to maintain smooth content flow",
+    live: "#",
+    code: "https://github.com/samar-abbas-786/Notice-Board",
+  },
+  {
+    id: 8,
+    title: "Thoughtify",
+    url: "https://notice-board-vx95.onrender.com",
+    img: Img8,
+    desc: "Thoughtify is a digital platform for sharing and exploring thoughts in a minimal, distraction-free environment. Users can post their thoughts, read those shared by others, and engage with a community built around expression and reflection. The platform emphasizes simplicity, privacy, and meaningful content over noise.",
+    live: "#",
+    code: "https://github.com/samar-abbas-786/Thoughtify",
+  },
 ];
