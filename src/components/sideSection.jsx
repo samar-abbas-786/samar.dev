@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import logo from "../assets/images/samred.jpg";
-import pdf from "../assets/images/Samr.pdf";
+import pdf from "../assets/images/Update_Samar_Resume5.pdf";
 import {
   FaGithub,
   FaLinkedin,
