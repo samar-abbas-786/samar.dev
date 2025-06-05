@@ -48,6 +48,15 @@ export const project = [
   },
   {
     id: 5,
+    title: "CareSync",
+    url: "https://caresync2-3.onrender.com",
+    img: Img5,
+    desc: "CareSync,a Heathcare Website, born from a hackathon, integrates a disease detection system with tools to find nearby doctors, hospitals, and pharmacies. It simplifies healthcare access by providing timely information and seamless navigation for medical care and pharmaceutical needs.",
+    live: "https://caresync2-3.onrender.com",
+    code: "https://github.com/samar-abbas-786/CareSync2",
+  },
+  {
+    id: 6,
     title: "Slotify",
     url: "gym-website-virid.vercel.app",
     img: Img4,
@@ -56,15 +65,6 @@ export const project = [
     code: "https://github.com/samar-abbas-786/Event-Scheduler",
   },
 
-  {
-    id: 6,
-    title: "CareSync",
-    url: "https://caresync2-3.onrender.com",
-    img: Img5,
-    desc: "CareSync,a Heathcare Website, born from a hackathon, integrates a disease detection system with tools to find nearby doctors, hospitals, and pharmacies. It simplifies healthcare access by providing timely information and seamless navigation for medical care and pharmaceutical needs.",
-    live: "https://caresync2-3.onrender.com",
-    code: "https://github.com/samar-abbas-786/CareSync2",
-  },
   {
     id: 7,
     title: "Online Notice Board",
