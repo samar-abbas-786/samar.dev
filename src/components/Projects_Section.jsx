@@ -31,7 +31,10 @@ const Projects_Section = () => {
         </button>
 
         {/* Projects Section */}
-        <h1 ref={projectsRef} className="text-4xl font-bold mb-10 text-center">
+        <h1
+          ref={projectsRef}
+          className="text-4xl text-purple-500 font-bold mb-10 text-center"
+        >
           My Projects
         </h1>
 

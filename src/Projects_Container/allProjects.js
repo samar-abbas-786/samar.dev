@@ -23,7 +23,7 @@ export const project = [
     url: "",
     img: Img1,
     desc: "Designed and developed a comprehensive school management platform with distinct user roles: Student, Teacher, and Admin. Students can seamlessly enroll in courses, access study materials, and attempt assessments. Teachers have the capability to create courses, upload relevant materials, and manage student enrollments. The Admin oversees user management, monitors platform activities, and maintains the school's event gallery for an enhanced digital experience..",
-    live: "sjs",
+    live: "https://edupi-samar786.vercel.app",
     code: "https://github.com/samar-abbas-786/Minor_Project",
   },
   {

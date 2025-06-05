@@ -57,7 +57,7 @@ const Skills = () => {
           : "bg-white text-gray-800"
       }`}
     >
-      <h1 className="md:text-4xl text-3xl font-bold mb-10 text-center">
+      <h1 className="md:text-4xl text-3xl font-bold mb-10 text-purple-500 text-center">
         My Skills
       </h1>
 

@@ -29,13 +29,15 @@ const EducationPage = () => {
     <div
       className={`min-h-screen py-12 px-6 transition-colors duration-500 ${
         dark
-          ? "bg-gradient-to-tr from-[#000000] via-[#101010] to-[#1a1a1a]text-white"
+          ? "bg-gradient-to-tr from-[#000000] via-[#101010] to-[#1a1a1a] text-white"
           : "bg-gradient-to-br from-gray-100 to-white text-gray-900"
       }`}
     >
-      <h2 className="text-4xl font-bold mb-12 text-center">My Education</h2>
+      <h2 className="text-4xl font-bold mb-12 text-center  bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        My Education
+      </h2>
 
-      <div className="grid gap-10 max-w-4xl mx-auto">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
         {educationData.map((edu, index) => (
           <motion.div
             key={index}
@@ -50,7 +52,7 @@ const EducationPage = () => {
           >
             <div
               className={`absolute -top-6 left-6 p-4 rounded-full shadow-md ${
-                dark ? "bg-blue-600 text-white" : "bg-blue-500 text-white"
+                dark ? "bg-purple-600 text-white" : "bg-purple-500 text-white"
               }`}
             >
               <FaGraduationCap className="text-3xl" />
@@ -59,7 +61,7 @@ const EducationPage = () => {
             <h3 className="text-2xl font-semibold mt-6">{edu.title}</h3>
             <p className="text-lg opacity-80">{edu.college}</p>
             <p className="text-sm mt-1 opacity-60">{edu.duration}</p>
-            <p className="mt-2 font-bold text-blue-500">{edu.cpi}</p>
+            <p className="mt-2 font-bold text-violet-500">{edu.cpi}</p>
             <p className="mt-3 leading-relaxed opacity-90">{edu.description}</p>
           </motion.div>
         ))}
