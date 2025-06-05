@@ -144,8 +144,8 @@ const Right = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="relative mb-8"
             >
-              <h1 className="text-5xl md:text-7xl font-black leading-tight">
-                I'm{" "}
+              <h1 className="text-4xl md:text-7xl font-black leading-tight">
+                I'm <br />
                 <span className="relative">
                   <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-pulse">
                     Samar Abbas
