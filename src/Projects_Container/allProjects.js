@@ -52,7 +52,7 @@ export const project = [
     url: "gym-website-virid.vercel.app",
     img: Img4,
     desc: "Developed Slotify, an event scheduling platform that allows users to set their availability and manage event slots efficiently. Other users can view available time slots for specific dates, making it easy to coordinate meetings and events. The platform ensures seamless scheduling with an intuitive interface for effortless time management.",
-    live: "gym-website-virid.vercel.app",
+    // live: alert("link is not deployed")
     code: "https://github.com/samar-abbas-786/Event-Scheduler",
   },
 
@@ -71,7 +71,7 @@ export const project = [
     url: "https://notice-board-vx95.onrender.com",
     img: Img7,
     desc: "Built a digital Notice Board system with distinct roles: Student, Teacher, and Admin. Students can access and download notices or attachments. Teachers can upload and manage their own posts. Admins handle user management and have full control over all notices to maintain smooth content flow",
-    live: "#",
+    // live: "#",
     code: "https://github.com/samar-abbas-786/Notice-Board",
   },
   {
@@ -80,7 +80,7 @@ export const project = [
     url: "https://notice-board-vx95.onrender.com",
     img: Img8,
     desc: "Thoughtify is a digital platform for sharing and exploring thoughts in a minimal, distraction-free environment. Users can post their thoughts, read those shared by others, and engage with a community built around expression and reflection. The platform emphasizes simplicity, privacy, and meaningful content over noise.",
-    live: "#",
+    // live: "#",
     code: "https://github.com/samar-abbas-786/Thoughtify",
   },
 ];
