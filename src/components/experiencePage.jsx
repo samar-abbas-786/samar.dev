@@ -48,75 +48,95 @@ export const ExperiencePage = () => {
 
   return (
     <div
-      className={`w-full py-2 transition-colors duration-500 ${
+      className={`w-full py-16 transition-colors duration-500 ${
         dark
           ? "bg-gradient-to-tr from-[#000000] via-[#101010] to-[#1a1a1a] text-white"
           : "bg-gray-100 text-gray-800"
       }`}
     >
-      <div className="max-w-4xl mx-auto px-6">
-        <h1 className="text-5xl font-bold mb-16 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-          My Experience
-        </h1>
+      <div className="max-w-6xl mx-auto px-8">
+        <div className="text-center mb-20">
+          <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            My Experience
+          </h1>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+        </div>
 
-        <div className="space-y-12">
+        <div className="space-y-24">
           {experiences.map((exp, index) => (
             <div
               key={exp.id}
-              className={`relative p-8 rounded-3xl shadow-xl transition-all duration-500 hover:shadow-2xl hover:scale-[1.02] backdrop-blur-md ${
-                dark
-                  ? "bg-white/5 border border-white/10 hover:bg-white/10"
-                  : "bg-white/70 border border-gray-200 hover:bg-white/90"
+              className={`relative transition-all duration-700 hover:scale-[1.01] ${
+                index % 2 === 0 ? "lg:pr-12" : "lg:pl-12"
               }`}
             >
-              {/* Decorative accent */}
-              <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-blue-500 to-purple-600 rounded-l-3xl"></div>
+              {/* Timeline line for larger screens */}
+              <div className="hidden lg:block absolute top-8 left-1/2 transform -translate-x-1/2 w-px h-full bg-gradient-to-b from-blue-500 to-purple-600 opacity-30"></div>
 
-              <div className="ml-6">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
-                  <h2 className="text-3xl font-bold mb-2 sm:mb-0">
-                    {exp.title}
-                  </h2>
-                  <div className="flex items-center gap-2">
+              {/* Timeline dot */}
+              <div className="hidden lg:flex absolute top-8 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full items-center justify-center">
+                <div className="w-2 h-2 bg-white rounded-full"></div>
+              </div>
+
+              {/* Content container */}
+              <div
+                className={`${
+                  index % 2 === 0
+                    ? "lg:text-right lg:mr-8"
+                    : "lg:text-left lg:ml-8"
+                }`}
+              >
+                {/* Header section */}
+                <div className="mb-8">
+                  <div className="flex items-center gap-4 mb-4 lg:justify-start">
                     <span
-                      className={`px-3 py-1 rounded-full text-xs font-medium ${
-                        dark
-                          ? "bg-blue-500/20 text-blue-300"
-                          : "bg-blue-100 text-blue-700"
-                      }`}
+                      className={`px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg`}
                     >
                       Project #{exp.id}
                     </span>
                   </div>
+
+                  <h2 className="text-2xl lg:text-3xl font-bold mb-4 leading-tight">
+                    <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                      {exp.title}
+                    </span>
+                  </h2>
+
+                  {exp.mentor && (
+                    <div className="mb-6">
+                      <p className="text-base">
+                        <span
+                          className={`font-medium ${
+                            dark ? "text-gray-300" : "text-gray-600"
+                          }`}
+                        >
+                          Mentor:{" "}
+                        </span>
+                        <a
+                          href={exp.mentorLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-500 font-semibold underline decoration-2 underline-offset-4 hover:text-blue-400 transition-colors duration-300"
+                        >
+                          {exp.mentor}
+                        </a>
+                      </p>
+                    </div>
+                  )}
                 </div>
 
-                {exp.mentor && (
-                  <div className="mb-6">
-                    <p className="text-blue-500 font-medium">
-                      Mentor:{" "}
-                      <a
-                        href={exp.mentorLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline hover:text-blue-400 transition-colors"
-                      >
-                        {exp.mentor}
-                      </a>
-                    </p>
-                  </div>
-                )}
-
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <h3
-                      className={`text-lg font-semibold mb-3 ${
-                        dark ? "text-gray-200" : "text-gray-700"
-                      }`}
-                    >
-                      Description
+                {/* Content grid */}
+                <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-10">
+                  <div
+                    className={`${
+                      index % 2 === 0 ? "lg:order-2" : "lg:order-1"
+                    }`}
+                  >
+                    <h3 className="text-lg font-bold mb-4 text-blue-500">
+                      Project Description
                     </h3>
                     <p
-                      className={`leading-relaxed ${
+                      className={`text-base leading-relaxed ${
                         dark ? "text-gray-300" : "text-gray-600"
                       }`}
                     >
@@ -124,16 +144,16 @@ export const ExperiencePage = () => {
                     </p>
                   </div>
 
-                  <div>
-                    <h3
-                      className={`text-lg font-semibold mb-3 ${
-                        dark ? "text-gray-200" : "text-gray-700"
-                      }`}
-                    >
+                  <div
+                    className={`${
+                      index % 2 === 0 ? "lg:order-1" : "lg:order-2"
+                    }`}
+                  >
+                    <h3 className="text-lg font-bold mb-4 text-purple-500">
                       Key Learnings
                     </h3>
                     <p
-                      className={`leading-relaxed ${
+                      className={`text-base leading-relaxed ${
                         dark ? "text-gray-300" : "text-gray-600"
                       }`}
                     >
@@ -142,22 +162,19 @@ export const ExperiencePage = () => {
                   </div>
                 </div>
 
-                <div className="mt-8">
-                  <h3
-                    className={`text-lg font-semibold mb-4 ${
-                      dark ? "text-gray-200" : "text-gray-700"
-                    }`}
-                  >
+                {/* Technology stack */}
+                <div className="mb-10">
+                  <h3 className="text-lg text-left font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                     Technology Stack
                   </h3>
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  <div className="flex flex-wrap gap-3 lg:justify-start">
                     {exp.techStack.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                        className={`px-3 py-2 rounded-full text-xs font-semibold transition-all duration-300 hover:scale-110 hover:shadow-lg ${
                           dark
-                            ? "bg-gray-700/50 text-gray-300 hover:bg-gray-600/50"
-                            : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                            ? "bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20"
+                            : "bg-white/80 text-gray-700 hover:bg-white shadow-md border border-gray-200"
                         }`}
                       >
                         {tech}
@@ -166,17 +183,18 @@ export const ExperiencePage = () => {
                   </div>
                 </div>
 
+                {/* Project link */}
                 {exp.projectLink && (
-                  <div className="flex justify-center sm:justify-start">
+                  <div className="flex lg:justify-start">
                     <a
                       href={exp.projectLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-8 rounded-full font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                      className="group inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-full font-semibold text-base shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:from-blue-700 hover:to-purple-700"
                     >
-                      <span>View Project</span>
+                      <span>Explore Project</span>
                       <svg
-                        className="w-4 h-4"
+                        className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -192,8 +210,22 @@ export const ExperiencePage = () => {
                   </div>
                 )}
               </div>
+
+              {/* Decorative elements */}
+              <div
+                className={`absolute -z-10 opacity-10 ${
+                  index % 2 === 0 ? "top-0 right-0" : "top-0 left-0"
+                }`}
+              >
+                <div className="w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full blur-2xl"></div>
+              </div>
             </div>
           ))}
+        </div>
+
+        {/* Bottom decorative line */}
+        <div className="mt-20 flex justify-center">
+          <div className="w-48 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full opacity-50"></div>
         </div>
       </div>
     </div>
