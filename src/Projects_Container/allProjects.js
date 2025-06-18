@@ -6,6 +6,7 @@ import Img5 from "../assets/images/caresync.png";
 import Img6 from "../assets/images/TubeGate.png";
 import Img7 from "../assets/images/notice.png";
 import Img8 from "../assets/images/thought.png";
+import Img9 from "../assets/images/leetq.png"; // Make sure you add this image
 
 export const project = [
   {
@@ -19,6 +20,15 @@ export const project = [
   },
   {
     id: 2,
+    title: " LeetQ – AI Browser Assistant for LeetCode",
+    url: "",
+    img: Img9,
+    desc: "LeetQ is a powerful browser extension that enhances your LeetCode problem-solving experience in real-time. It intelligently detects the current problem you're solving and provides AI-powered contextual hints, solution strategies, and suggestions on the spot—without disrupting your workflow. Built using CRXJS and integrated with Claude API for seamless contextual assistance.",
+    // live: "https://chrome.google.com/webstore/detail/leetq-ai-extension/...", // Add actual live link if available
+    code: "https://github.com/samar-abbas-786/leetcode-browser-extension",
+  },
+  {
+    id: 3,
     title: "EduPI",
     url: "",
     img: Img1,
@@ -27,7 +37,7 @@ export const project = [
     code: "https://github.com/samar-abbas-786/Minor_Project",
   },
   {
-    id: 3,
+    id: 4,
     title: "Artify",
     url: "https://artify-samar.vercel.app/",
     img: Img2,
@@ -35,19 +45,17 @@ export const project = [
     live: "https://artify-samar.vercel.app/",
     code: "https://github.com/samar-abbas-786/Artify",
   },
-
   {
-    id: 4,
+    id: 5,
     title: "Campus Bazaar",
     url: "https://campus-bazaar.onrender.com/",
     img: Img3,
     desc: "Introducing Campus Bazaar: Simplify college life with 𝘼𝙙𝙙 𝙄𝙩𝙚𝙢𝙨 to list and sell items, 𝑺𝙚𝒍𝙡 𝙄𝒕𝙚𝙢𝙨 for transactions, 𝙍𝙚𝙣𝙩 𝙄𝙩𝙚𝙢𝙨 for rentals, and 𝙂𝙞𝙫𝙚 𝙎𝙪𝙜𝙜𝙚𝙨𝙩𝙞𝙤𝙣𝙨 to shape our platform. Join 𝗖𝗮𝗺𝗽𝘂𝘀 𝗕𝗮𝘇𝗮𝗮𝗿 for an intuitive, hassle-free experience and discover campus connectivity today.",
     live: "https://campus-bazaar-z22g.onrender.com",
     code: "https://github.com/samar-abbas-786/Campus-Bazaar",
-    //https://campus-bazaar.onrender.com/
   },
   {
-    id: 5,
+    id: 6,
     title: "CareSync",
     url: "https://caresync2-3.onrender.com",
     img: Img5,
@@ -56,31 +64,27 @@ export const project = [
     code: "https://github.com/samar-abbas-786/CareSync2",
   },
   {
-    id: 6,
+    id: 7,
     title: "Slotify",
     url: "gym-website-virid.vercel.app",
     img: Img4,
     desc: "Developed Slotify, an event scheduling platform that allows users to set their availability and manage event slots efficiently. Other users can view available time slots for specific dates, making it easy to coordinate meetings and events. The platform ensures seamless scheduling with an intuitive interface for effortless time management.",
-    // live: alert("link is not deployed")
     code: "https://github.com/samar-abbas-786/Event-Scheduler",
   },
-
   {
-    id: 7,
+    id: 8,
     title: "Online Notice Board",
     url: "https://notice-board-vx95.onrender.com",
     img: Img7,
     desc: "Built a digital Notice Board system with distinct roles: Student, Teacher, and Admin. Students can access and download notices or attachments. Teachers can upload and manage their own posts. Admins handle user management and have full control over all notices to maintain smooth content flow",
-    // live: "#",
     code: "https://github.com/samar-abbas-786/Notice-Board",
   },
   {
-    id: 8,
+    id: 9,
     title: "Thoughtify",
     url: "https://notice-board-vx95.onrender.com",
     img: Img8,
     desc: "Thoughtify is a digital platform for sharing and exploring thoughts in a minimal, distraction-free environment. Users can post their thoughts, read those shared by others, and engage with a community built around expression and reflection. The platform emphasizes simplicity, privacy, and meaningful content over noise.",
-    // live: "#",
     code: "https://github.com/samar-abbas-786/Thoughtify",
   },
 ];
