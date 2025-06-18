@@ -12,7 +12,7 @@ import {
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/images/samred.jpg";
-import pdf from "../assets/images/Update_Samar_Resume5.pdf";
+import pdf from "../assets/images/samar-resume.pdf";
 import { useScroll } from "../context/ScrollContext";
 
 const TopNav = () => {
