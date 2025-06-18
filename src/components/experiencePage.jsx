@@ -48,133 +48,117 @@ export const ExperiencePage = () => {
 
   return (
     <div
-      className={`w-full py-16 transition-colors duration-500 ${
+      className={`w-full py-20 transition-colors duration-500 ${
         dark
           ? "bg-gradient-to-tr from-[#000000] via-[#101010] to-[#1a1a1a] text-white"
           : "bg-gray-100 text-gray-800"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-8">
+      <div className="max-w-6xl mx-auto px-6 md:px-8">
         <div className="text-center mb-20">
-          <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             My Experience
           </h1>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 mt-4 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
         </div>
 
-        <div className="space-y-24">
+        <div className="space-y-32 relative">
+          {/* Center timeline line */}
+          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-600 to-purple-600 opacity-30 transform -translate-x-1/2"></div>
+
           {experiences.map((exp, index) => (
             <div
               key={exp.id}
-              className={`relative transition-all duration-700 hover:scale-[1.01] ${
+              className={`relative group ${
                 index % 2 === 0 ? "lg:pr-12" : "lg:pl-12"
               }`}
             >
-              {/* Timeline line for larger screens */}
-              <div className="hidden lg:block absolute top-8 left-1/2 transform -translate-x-1/2 w-px h-full bg-gradient-to-b from-blue-500 to-purple-600 opacity-30"></div>
-
               {/* Timeline dot */}
-              <div className="hidden lg:flex absolute top-8 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full items-center justify-center">
+              <div className="hidden lg:flex absolute left-1/2 top-0 transform -translate-x-1/2 w-5 h-5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full items-center justify-center z-10">
                 <div className="w-2 h-2 bg-white rounded-full"></div>
               </div>
 
-              {/* Content container */}
+              {/* Decorative Floating Blob */}
               <div
-                className={`${
+                className={`absolute -z-10 blur-3xl opacity-20 animate-pulse ${
                   index % 2 === 0
-                    ? "lg:text-right lg:mr-8"
-                    : "lg:text-left lg:ml-8"
+                    ? "top-[-20px] right-[-50px]"
+                    : "top-[-20px] left-[-50px]"
                 }`}
               >
-                {/* Header section */}
-                <div className="mb-8">
-                  <div className="flex items-center gap-4 mb-4 lg:justify-start">
-                    <span
-                      className={`px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg`}
-                    >
-                      Project #{exp.id}
-                    </span>
-                  </div>
+                <div className="w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full"></div>
+              </div>
 
-                  <h2 className="text-2xl lg:text-3xl font-bold mb-4 leading-tight">
-                    <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                      {exp.title}
-                    </span>
+              <div
+                className={`backdrop-blur-xl shadow-xl transition-all duration-500 rounded-2xl px-6 md:px-10 py-10 ${
+                  dark
+                    ? "bg-white/5 border border-white/10"
+                    : "bg-white border border-gray-200"
+                } ${index % 2 === 0 ? "lg:ml-auto" : "lg:mr-auto"} max-w-2xl`}
+              >
+                {/* Header */}
+                <div className="mb-6">
+                  <span className="inline-block mb-4 px-4 py-1 text-sm font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-md">
+                    Project #{exp.id}
+                  </span>
+
+                  <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    {exp.title}
                   </h2>
 
                   {exp.mentor && (
-                    <div className="mb-6">
-                      <p className="text-base">
-                        <span
-                          className={`font-medium ${
-                            dark ? "text-gray-300" : "text-gray-600"
-                          }`}
-                        >
-                          Mentor:{" "}
-                        </span>
-                        <a
-                          href={exp.mentorLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-blue-500 font-semibold underline decoration-2 underline-offset-4 hover:text-blue-400 transition-colors duration-300"
-                        >
-                          {exp.mentor}
-                        </a>
-                      </p>
-                    </div>
+                    <p className="mt-2 text-sm">
+                      <span
+                        className={dark ? "text-gray-400" : "text-gray-600"}
+                      >
+                        Mentor:{" "}
+                      </span>
+                      <a
+                        href={exp.mentorLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium text-blue-500 hover:text-purple-500 underline underline-offset-4"
+                      >
+                        {exp.mentor}
+                      </a>
+                    </p>
                   )}
                 </div>
 
-                {/* Content grid */}
-                <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-10">
-                  <div
-                    className={`${
-                      index % 2 === 0 ? "lg:order-2" : "lg:order-1"
-                    }`}
-                  >
-                    <h3 className="text-lg font-bold mb-4 text-blue-500">
+                {/* Content Grid */}
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h3 className="text-md font-semibold text-blue-500 mb-2">
                       Project Description
                     </h3>
-                    <p
-                      className={`text-base leading-relaxed ${
-                        dark ? "text-gray-300" : "text-gray-600"
-                      }`}
-                    >
+                    <p className={dark ? "text-gray-300" : "text-gray-700"}>
                       {exp.description}
                     </p>
                   </div>
 
-                  <div
-                    className={`${
-                      index % 2 === 0 ? "lg:order-1" : "lg:order-2"
-                    }`}
-                  >
-                    <h3 className="text-lg font-bold mb-4 text-purple-500">
+                  <div>
+                    <h3 className="text-md font-semibold text-purple-500 mb-2">
                       Key Learnings
                     </h3>
-                    <p
-                      className={`text-base leading-relaxed ${
-                        dark ? "text-gray-300" : "text-gray-600"
-                      }`}
-                    >
+                    <p className={dark ? "text-gray-300" : "text-gray-700"}>
                       {exp.learnings}
                     </p>
                   </div>
                 </div>
 
-                {/* Technology stack */}
-                <div className="mb-10">
-                  <h3 className="text-lg text-left font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                {/* Tech Stack */}
+                <div className="mt-6">
+                  <h3 className="text-md font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-3">
                     Technology Stack
                   </h3>
-                  <div className="flex flex-wrap gap-3 lg:justify-start">
-                    {exp.techStack.map((tech, techIndex) => (
+                  <div className="flex flex-wrap gap-3">
+                    {exp.techStack.map((tech, idx) => (
                       <span
-                        key={techIndex}
-                        className={`px-3 py-2 rounded-full text-xs font-semibold transition-all duration-300 hover:scale-110 hover:shadow-lg ${
+                        key={idx}
+                        className={`px-3 py-1 text-xs font-medium rounded-full transition-all duration-300 hover:scale-105 ${
                           dark
-                            ? "bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20"
-                            : "bg-white/80 text-gray-700 hover:bg-white shadow-md border border-gray-200"
+                            ? "bg-white/10 text-gray-300 border border-white/20"
+                            : "bg-gray-100 text-gray-700 border border-gray-200 shadow-sm"
                         }`}
                       >
                         {tech}
@@ -183,48 +167,39 @@ export const ExperiencePage = () => {
                   </div>
                 </div>
 
-                {/* Project link */}
+                {/* Project Link */}
                 {exp.projectLink && (
-                  <div className="flex lg:justify-start">
+                  <div className="mt-8">
                     <a
                       href={exp.projectLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-full font-semibold text-base shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:from-blue-700 hover:to-purple-700"
+                      className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium py-2 px-5 rounded-full transition-all duration-300 hover:from-blue-700 hover:to-purple-700 shadow-md hover:shadow-lg"
                     >
-                      <span>Explore Project</span>
+                      Explore Project
                       <svg
-                        className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
+                        className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
                         fill="none"
                         stroke="currentColor"
+                        strokeWidth={2}
                         viewBox="0 0 24 24"
                       >
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
                         />
                       </svg>
                     </a>
                   </div>
                 )}
               </div>
-
-              {/* Decorative elements */}
-              <div
-                className={`absolute -z-10 opacity-10 ${
-                  index % 2 === 0 ? "top-0 right-0" : "top-0 left-0"
-                }`}
-              >
-                <div className="w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full blur-2xl"></div>
-              </div>
             </div>
           ))}
         </div>
 
-        {/* Bottom decorative line */}
-        <div className="mt-20 flex justify-center">
+        {/* Bottom Line */}
+        <div className="mt-24 flex justify-center">
           <div className="w-48 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full opacity-50"></div>
         </div>
       </div>
