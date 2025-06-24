@@ -15,7 +15,7 @@ export const project = [
     url: "",
     img: Img6,
     desc: "Built an automated YouTube publishing platform with secure OAuth integration, allowing users to link their channels and publish videos with a single click. Editors upload content, auto-fill metadata, and hand off videos to creators. The platform ensures seamless collaboration, compliance with YouTube policies, and streamlines the end-to-end publishing workflow.",
-    live: "https://tube-mate-revolution.vercel.app/",
+    live: "https://drive.google.com/file/d/1yaE8lwMzhK4Br0VblM1ZQdlP-30RvBwP/view?usp=sharing",
     code: "https://github.com/samar-abbas-786/TubeMate",
   },
   {
@@ -24,7 +24,7 @@ export const project = [
     url: "",
     img: Img9,
     desc: "LeetQ is a powerful browser extension that enhances your LeetCode problem-solving experience in real-time. It intelligently detects the current problem you're solving and provides AI-powered contextual hints, solution strategies, and suggestions on the spot—without disrupting your workflow. Built using CRXJS and integrated with Claude API for seamless contextual assistance.",
-    // live: "https://chrome.google.com/webstore/detail/leetq-ai-extension/...", // Add actual live link if available
+    live: "https://drive.google.com/file/d/1kaWuSrmLNgYbP5hKRmpg3r1QwB1F_L56/view?usp=sharing", // Add actual live link if available
     code: "https://github.com/samar-abbas-786/leetcode-browser-extension",
   },
   {
