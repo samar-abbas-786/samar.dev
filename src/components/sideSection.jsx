@@ -12,7 +12,9 @@ import {
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/images/samred.jpg";
-import pdf from "../assets/images/samar-resume.pdf";
+import pdf from "../assets/images/samar-resume-3.pdf";
+import { SiLeetcode } from "react-icons/si";
+
 import { useScroll } from "../context/ScrollContext";
 
 const TopNav = () => {
@@ -59,6 +61,12 @@ const TopNav = () => {
       icon: FaGithub,
       color: dark ? "text-white" : "text-gray-900",
       label: "GitHub",
+    },
+    {
+      href: "https://leetcode.com/u/samar_abbas_786/",
+      icon: SiLeetcode,
+      color: dark ? "text-yellow-500" : "text-yellow-500",
+      label: "Leetcode",
     },
     {
       href: "https://x.com/SamarAb65178114",
