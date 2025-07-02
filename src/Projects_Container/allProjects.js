@@ -7,6 +7,7 @@ import Img6 from "../assets/images/TubeGate.png";
 import Img7 from "../assets/images/notice.png";
 import Img8 from "../assets/images/thought.png";
 import Img9 from "../assets/images/leetq.png"; // Make sure you add this image
+import Img10 from "../assets/images/npm.png"; // Make sure you add this image
 
 export const project = [
   {
@@ -29,6 +30,15 @@ export const project = [
   },
   {
     id: 3,
+    title: " Samar-Kit : MERN Boilerplate CLI & NPM Package",
+    url: "",
+    img: Img10,
+    desc: "samar-kit is an npm package and CLI tool that instantly scaffolds a production-ready MERN stack app. With npx samar-kit, it generates the folder structure, backend APIs, React frontend, and auth boilerplate—complete with pre-configured routing, MongoDB setup, and Tailwind UI for a quick project start.",
+    live: "https://www.npmjs.com/package/samar-kit",
+    // code: "https://github.com/samar-abbas-786/Minor_Project",
+  },
+  {
+    id: 4,
     title: "EduPI",
     url: "",
     img: Img1,
@@ -37,7 +47,7 @@ export const project = [
     code: "https://github.com/samar-abbas-786/Minor_Project",
   },
   {
-    id: 4,
+    id: 5,
     title: "Artify",
     url: "https://artify-samar.vercel.app/",
     img: Img2,
@@ -46,7 +56,7 @@ export const project = [
     code: "https://github.com/samar-abbas-786/Artify",
   },
   {
-    id: 5,
+    id: 6,
     title: "Campus Bazaar",
     url: "https://campus-bazaar.onrender.com/",
     img: Img3,
@@ -55,7 +65,7 @@ export const project = [
     code: "https://github.com/samar-abbas-786/Campus-Bazaar",
   },
   {
-    id: 6,
+    id: 7,
     title: "CareSync",
     url: "https://caresync2-3.onrender.com",
     img: Img5,
@@ -64,7 +74,7 @@ export const project = [
     code: "https://github.com/samar-abbas-786/CareSync2",
   },
   {
-    id: 7,
+    id: 8,
     title: "Slotify",
     url: "gym-website-virid.vercel.app",
     img: Img4,
@@ -72,7 +82,7 @@ export const project = [
     code: "https://github.com/samar-abbas-786/Event-Scheduler",
   },
   {
-    id: 8,
+    id: 9,
     title: "Online Notice Board",
     url: "https://notice-board-vx95.onrender.com",
     img: Img7,
@@ -80,7 +90,7 @@ export const project = [
     code: "https://github.com/samar-abbas-786/Notice-Board",
   },
   {
-    id: 9,
+    id: 10,
     title: "Thoughtify",
     url: "https://notice-board-vx95.onrender.com",
     img: Img8,
