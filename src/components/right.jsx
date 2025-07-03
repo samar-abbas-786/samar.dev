@@ -124,7 +124,7 @@ const Right = () => {
       <TopNav toggleDark={toggleDark} />
 
       <motion.section
-        className="min-h-screen pb-20 md:pb-28 flex flex-col justify-center items-center px-6 md:px-20 text-center"
+        className="min-h-[100vh] pb-20 md:pb-28 flex flex-col justify-center items-center px-6 md:px-20 text-center"
         ref={homeRef}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}

@@ -161,7 +161,7 @@ const TopNav = () => {
           </nav>
 
           {/* Social Icons */}
-          {/* <div className="hidden md:flex gap-2 items-center">
+          <div className="hidden md:flex gap-2 items-center">
             {socialLinks.map((link) => {
               const Icon = link.icon;
               return (
@@ -177,7 +177,7 @@ const TopNav = () => {
                 </motion.a>
               );
             })}
-          </div> */}
+          </div>
 
           {/* Dark Mode Toggle */}
           <motion.button
