@@ -50,45 +50,6 @@ const TopNav = () => {
     { name: "Get in Touch", ref: contactRef },
   ];
 
-  const socialLinks = [
-    {
-      href: "https://linkedin.com/in/samar-abbas-a1ab4625a",
-      icon: FaLinkedin,
-      color: "text-blue-700",
-      label: "LinkedIn",
-    },
-    {
-      href: "https://github.com/samar-abbas-786",
-      icon: FaGithub,
-      color: dark ? "text-white" : "text-gray-900",
-      label: "GitHub",
-    },
-    {
-      href: "https://leetcode.com/u/samar_abbas_786/",
-      icon: SiLeetcode,
-      color: dark ? "text-yellow-500" : "text-yellow-500",
-      label: "Leetcode",
-    },
-    {
-      href: "https://x.com/SamarAb65178114",
-      icon: FaTwitter,
-      color: "text-blue-500",
-      label: "Twitter",
-    },
-    {
-      href: "https://instagram.com/samar_abbas_786",
-      icon: FaInstagram,
-      color: "text-pink-600",
-      label: "Instagram",
-    },
-    {
-      href: "https://www.facebook.com/samar.naqvi.568/",
-      icon: FaFacebook,
-      color: "text-blue-600",
-      label: "Facebook",
-    },
-  ];
-
   const handleNavClick = (item) => {
     setSelectedMenu(item.name);
     scrollToSection(item.ref);
@@ -159,25 +120,6 @@ const TopNav = () => {
               Resume
             </a>
           </nav>
-
-          {/* Social Icons */}
-          <div className="hidden md:flex gap-2 items-center">
-            {socialLinks.map((link) => {
-              const Icon = link.icon;
-              return (
-                <motion.a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`p-2 rounded-full ${link.color} text-xl hover:scale-125 transition`}
-                  whileHover={{ rotate: 360 }}
-                >
-                  <Icon />
-                </motion.a>
-              );
-            })}
-          </div>
 
           {/* Dark Mode Toggle */}
           <motion.button
