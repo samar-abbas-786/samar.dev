@@ -69,9 +69,14 @@ const Skills = () => {
               dark ? "bg-zinc-900 hover:bg-white/20" : "bg-gray-100"
             }`}
           >
-            <img src={skill.icon} alt={skill.name} className="w-12 h-12 mb-1" />
+            <img
+              loading="lazy"
+              src={skill.icon}
+              alt={skill.name}
+              className="w-8 8 mb-1"
+            />
             <p
-              className={`text-sm font-medium ${
+              className={`text-xs font-medium ${
                 dark ? "text-gray-200" : "text-gray-700"
               }`}
             >
