@@ -66,7 +66,7 @@ const Skills = () => {
           <div
             key={index}
             className={`flex flex-col items-center p-3 rounded-lg transition duration-300 shadow-sm hover:shadow-md ${
-              dark ? "bg-white/10 hover:bg-white/20" : "bg-gray-100"
+              dark ? "bg-zinc-900 hover:bg-white/20" : "bg-gray-100"
             }`}
           >
             <img src={skill.icon} alt={skill.name} className="w-12 h-12 mb-1" />
