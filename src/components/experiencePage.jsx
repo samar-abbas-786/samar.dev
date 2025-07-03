@@ -92,7 +92,7 @@ export const ExperiencePage = () => {
                     Project #{exp.id}
                   </span>
 
-                  <h2 className="text-xl font-bold text-gray-100">
+                  <h2 className="text-xl font-bold text-gray-400">
                     {exp.title}
                   </h2>
 
