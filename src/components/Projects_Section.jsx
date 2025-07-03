@@ -97,7 +97,7 @@ const Projects_Section = () => {
                   src={proj.img}
                   alt={proj.title}
                   loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-fit transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                   <h2 className="text-white text-xl font-bold">{proj.title}</h2>
