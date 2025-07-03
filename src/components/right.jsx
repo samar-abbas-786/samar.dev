@@ -102,7 +102,7 @@ const Right = () => {
 
   return (
     <div
-      className={`min-h-screen w-full font-thin transition-all duration-700 ${
+      className={`min-h-screen w-full transition-all duration-700 ${
         dark
           ? "bg-gradient-to-tr from-[#000000] via-[#101010] to-[#1a1a1a] text-white"
           : "bg-gray-100 text-gray-800"
