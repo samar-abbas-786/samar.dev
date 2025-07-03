@@ -183,7 +183,7 @@ const TopNav = () => {
           <motion.button
             onClick={toggleDarkMode}
             className={`ml-2 p-3 rounded-xl transition ${
-              dark ? "bg-white/10 text-yellow-400" : "bg-black/10 text-gray-800"
+              dark ? "bg-zinc-900 text-yellow-400" : "bg-black/10 text-gray-800"
             } hover:scale-110`}
             whileHover={{ rotate: 180 }}
             aria-label="Toggle Dark Mode"
