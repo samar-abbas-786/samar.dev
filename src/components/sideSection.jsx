@@ -9,11 +9,12 @@ import {
   FaBars,
   FaTimes,
 } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
+
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/images/samred.jpg";
 import pdf from "../assets/images/samar-resume-3.pdf";
-import { SiLeetcode } from "react-icons/si";
 
 import { useScroll } from "../context/ScrollContext";
 
@@ -160,7 +161,7 @@ const TopNav = () => {
           </nav>
 
           {/* Social Icons */}
-          <div className="hidden md:flex gap-2 items-center">
+          {/* <div className="hidden md:flex gap-2 items-center">
             {socialLinks.map((link) => {
               const Icon = link.icon;
               return (
@@ -176,7 +177,7 @@ const TopNav = () => {
                 </motion.a>
               );
             })}
-          </div>
+          </div> */}
 
           {/* Dark Mode Toggle */}
           <motion.button
