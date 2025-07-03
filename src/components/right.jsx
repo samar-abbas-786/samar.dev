@@ -186,7 +186,9 @@ const Right = () => {
         <section ref={expRef}>
           <ExperiencePage />
         </section>
-        
+        <section ref={projectRef}>
+          <Projects_Section />
+        </section>
         <section ref={skillRef}>
           <Skill />
         </section>
