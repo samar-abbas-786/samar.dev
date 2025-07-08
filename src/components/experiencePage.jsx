@@ -48,7 +48,7 @@ export const ExperiencePage = () => {
 
   return (
     <div
-      className={`w-full py-16 transition-colors duration-500 ${
+      className={`w-full  transition-colors duration-500 ${
         dark
           ? "bg-gradient-to-tr from-[#000000] via-[#101010] to-[#1a1a1a] text-gray-300"
           : "bg-gray-50 text-gray-700"
