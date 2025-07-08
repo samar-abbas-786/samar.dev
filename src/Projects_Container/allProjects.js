@@ -16,8 +16,8 @@ export const project = [
     url: "",
     img: Img6,
     desc: "Built an automated YouTube publishing platform with secure OAuth integration...",
-    live: "https://drive.google.com/file/d/1yaE8lwMzhK4Br0VblM1ZQdlP-30RvBwP/view?usp=sharing",
-    code: "https://github.com/samar-abbas-786/TubeMate",
+    live: "https://tubegate.vercel.app/",
+    code: "https://github.com/samar-abbas-786/TubeGate",
     techStack: [
       "Next.js",
       "OAuth 2.0",
