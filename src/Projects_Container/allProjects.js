@@ -6,8 +6,9 @@ import Img5 from "../assets/images/caresync.png";
 import Img6 from "../assets/images/TubeGate.png";
 import Img7 from "../assets/images/notice.png";
 import Img8 from "../assets/images/thought.png";
-import Img9 from "../assets/images/leetq.png"; // Make sure you add this image
-import Img10 from "../assets/images/npm.png"; // Make sure you add this image
+import Img9 from "../assets/images/leetq.png";
+import Img10 from "../assets/images/npm.png";
+import Img11 from "../assets/images/light.png"; // <-- Add your image here
 
 export const project = [
   {
@@ -29,6 +30,23 @@ export const project = [
   },
   {
     id: 2,
+    title: "Transcriptify – AI-Powered Video Summarizer",
+    url: "",
+    img: Img11,
+    desc: "Transcriptify takes any YouTube video URL and generates detailed transcripts and topic-wise summaries using advanced AI.",
+    live: "https://transcriptify-two.vercel.app/",
+    code: "https://github.com/samar-abbas-786/Transcriptify",
+    techStack: [
+      "React.js",
+      "Tailwind CSS",
+      "Express.js",
+      "Node.js",
+      "react-pdf/renderer",
+      "Gemini API",
+    ],
+  },
+  {
+    id: 3,
     title: "LeetQ – AI Browser Assistant for LeetCode",
     url: "",
     img: Img9,
@@ -44,7 +62,7 @@ export const project = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Samar-Kit : MERN Boilerplate CLI & NPM Package",
     url: "",
     img: Img10,
@@ -62,7 +80,7 @@ export const project = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "EduPI",
     url: "",
     img: Img1,
@@ -72,7 +90,7 @@ export const project = [
     techStack: ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
   },
   {
-    id: 5,
+    id: 6,
     title: "Artify",
     url: "https://artify-samar.vercel.app/",
     img: Img2,
@@ -82,7 +100,7 @@ export const project = [
     techStack: ["React", "MongoDB", "Express", "Node.js", "Tailwind CSS"],
   },
   {
-    id: 6,
+    id: 7,
     title: "Campus Bazaar",
     url: "https://campus-bazaar.onrender.com/",
     img: Img3,
@@ -92,7 +110,7 @@ export const project = [
     techStack: ["Node.js", "Express", "MongoDB Cluster", "EJS", "CSS"],
   },
   {
-    id: 7,
+    id: 8,
     title: "CareSync",
     url: "https://caresync2-3.onrender.com",
     img: Img5,
@@ -110,7 +128,7 @@ export const project = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     title: "Slotify",
     url: "https://gym-website-virid.vercel.app",
     img: Img4,
@@ -119,7 +137,7 @@ export const project = [
     techStack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
   },
   {
-    id: 9,
+    id: 10,
     title: "Online Notice Board",
     url: "https://notice-board-vx95.onrender.com",
     img: Img7,
@@ -134,7 +152,7 @@ export const project = [
     ],
   },
   {
-    id: 10,
+    id: 11,
     title: "Thoughtify",
     url: "https://notice-board-vx95.onrender.com",
     img: Img8,
