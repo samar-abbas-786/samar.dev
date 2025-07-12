@@ -16,7 +16,7 @@ export const project = [
     title: "TubeGate",
     url: "",
     img: Img6,
-    desc: "Built an automated YouTube publishing platform with secure OAuth integration...",
+    desc: "Built an automated YouTube publishing platform where editors prefill video title, description, and tags; creators can publish directly to their channel with one click via OAuth, without downloading the video.",
     live: "https://tubegate.vercel.app/",
     code: "https://github.com/samar-abbas-786/TubeGate",
     techStack: [
@@ -33,7 +33,7 @@ export const project = [
     title: "Transcriptify – AI-Powered Video Summarizer",
     url: "",
     img: Img11,
-    desc: "Transcriptify takes any YouTube video URL and generates detailed transcripts and topic-wise summaries using advanced AI.",
+    desc: "Transcriptify is a web application that allows users to search or paste any YouTube video link and instantly generate detailed transcripts and topic-wise AI-generated summaries, enhancing video content comprehension and accessibility.",
     live: "https://transcriptify-two.vercel.app/",
     code: "https://github.com/samar-abbas-786/Transcriptify",
     techStack: [
@@ -50,7 +50,7 @@ export const project = [
     title: "LeetQ – AI Browser Assistant for LeetCode",
     url: "",
     img: Img9,
-    desc: "LeetQ is a powerful browser extension that enhances your LeetCode problem-solving...",
+    desc: "LeetQ is a powerful browser extension that enhances the LeetCode experience by providing intelligent hints, curated resources, and real-time problem analysis to improve problem-solving efficiency",
     live: "https://drive.google.com/file/d/1kaWuSrmLNgYbP5hKRmpg3r1QwB1F_L56/view?usp=sharing",
     code: "https://github.com/samar-abbas-786/leetcode-browser-extension",
     techStack: [
@@ -66,7 +66,7 @@ export const project = [
     title: "Samar-Kit : MERN Boilerplate CLI & NPM Package",
     url: "",
     img: Img10,
-    desc: "samar-kit is an npm package and CLI tool that instantly scaffolds a production-ready MERN stack app...",
+    desc: "samar-kit is an npm package and CLI tool that instantly scaffolds a production-ready MERN stack application with built-in routing, authentication, and modular folder structure—accelerating full-stack development.",
     live: "https://www.npmjs.com/package/samar-kit",
     techStack: [
       "Node.js",
