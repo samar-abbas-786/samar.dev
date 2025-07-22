@@ -43,9 +43,9 @@ const TopNav = () => {
 
   const navItems = [
     { name: "Home", ref: homeRef },
+    { name: "Projects", ref: projectRef },
     { name: "Education", ref: eduRef },
     { name: "Experience", ref: expRef },
-    { name: "Projects", ref: projectRef },
     { name: "Skills", ref: skillRef },
     { name: "Get in Touch", ref: contactRef },
   ];

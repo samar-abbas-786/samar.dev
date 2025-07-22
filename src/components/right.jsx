@@ -178,7 +178,9 @@ const Right = () => {
           ))}
         </div>
       </motion.section>
-
+      <section ref={projectRef}>
+        <Projects_Section />
+      </section>
       <div className="space-y-20 pb-20">
         <section ref={eduRef}>
           <EducationPage />
@@ -186,9 +188,7 @@ const Right = () => {
         <section ref={expRef}>
           <ExperiencePage />
         </section>
-        <section ref={projectRef}>
-          <Projects_Section />
-        </section>
+
         <section ref={skillRef}>
           <Skill />
         </section>
