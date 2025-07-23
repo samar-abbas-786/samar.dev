@@ -155,11 +155,11 @@ const Right = () => {
             dark ? "text-gray-300" : "text-gray-700"
           }`}
         >
-          I build scalable and efficient web applications using modern tech
-          stacks.
+          I build intelligent web solutions by fusing AI with modern
+          technologies
           <br />
-          Passionate about clean code, user experience, and performance
-          optimization.
+          focused on real-world impact, automation, and seamless digital
+          experiences.
         </p>
 
         <div className="mt-8 flex flex-wrap justify-center gap-4">
