@@ -10,7 +10,7 @@ export const ScrollProvider = ({ children }) => {
   const contactRef = useRef(null);
   const eduRef = useRef(null);
 
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(false);
 
   const scrollToSection = (sectionRef) => {
     if (sectionRef && sectionRef.current) {
