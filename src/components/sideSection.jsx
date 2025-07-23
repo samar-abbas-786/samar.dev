@@ -14,7 +14,7 @@ import { SiLeetcode } from "react-icons/si";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/images/samred.jpg";
-import pdf from "../assets/images/samar-resume-3.pdf";
+import pdf from "../assets/images/samar-resume-2.pdf";
 
 import { useScroll } from "../context/ScrollContext";
 
