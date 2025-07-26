@@ -78,7 +78,7 @@ const Projects_Section = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
           {project.map((proj) => (
             <motion.div
               key={proj.id}
@@ -86,121 +86,102 @@ const Projects_Section = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
               whileHover={{ y: -5 }}
-              className={`flex flex-col rounded-2xl overflow-hidden transition-all duration-300 ${
+              className={`flex flex-col rounded-xl overflow-hidden transition-all duration-300 h-full ${
                 dark
-                  ? "bg-zinc-900/70 hover:bg-zinc-900 border border-zinc-800 hover:border-purple-500/20 shadow-lg shadow-purple-900/10"
-                  : "bg-white hover:bg-gray-50 border border-gray-100 hover:border-purple-200 shadow-md"
+                  ? "bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 shadow-md"
+                  : "bg-white hover:bg-gray-50 border border-gray-200 shadow-sm"
               }`}
             >
-              <div className="relative h-56 overflow-hidden group">
+              <div className="relative h-48 w-full overflow-hidden">
                 <img
                   src={proj.img}
                   alt={proj.title}
                   loading="lazy"
-                  className="w-full h-full object-fill transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                  <h2 className="text-white text-xl font-bold">{proj.title}</h2>
-                </div>
               </div>
 
-              <div className="p-6 flex flex-col flex-grow">
-                <div className="flex-grow">
-                  <div className="flex justify-between items-start mb-3">
-                    <h2
-                      className={`text-xl font-bold ${
-                        dark ? "text-white" : "text-gray-900"
-                      }`}
-                    >
-                      {proj.title}
-                    </h2>
-                    <button
-                      onClick={() => toggleDetails(proj.id)}
-                      className={`text-xs font-medium px-3 py-1 rounded-full ${
-                        dark
-                          ? "text-blue-400 hover:text-blue-300 bg-blue-900/20 hover:bg-blue-900/30"
-                          : "text-blue-600 hover:text-blue-800 bg-blue-100 hover:bg-blue-200"
-                      } transition-colors`}
-                    >
-                      {visibleDetails[proj.id] ? "Hide" : "Details"}
-                    </button>
-                  </div>
-
-                  <AnimatePresence>
-                    {visibleDetails[proj.id] && (
-                      <motion.div
-                        className="overflow-hidden"
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <p
-                          className={`text-sm mb-4 ${
-                            dark ? "text-gray-300" : "text-gray-600"
-                          }`}
-                        >
-                          {proj.desc}
-                        </p>
-                        {proj.techStack && (
-                          <div>
-                            <p
-                              className={`text-xs font-semibold mb-2 ${
-                                dark ? "text-gray-400" : "text-gray-500"
-                              }`}
-                            >
-                              TECH STACK
-                            </p>
-                            <div className="flex flex-wrap gap-2">
-                              {proj.techStack.map((tech, index) => (
-                                <span
-                                  key={index}
-                                  className={`text-xs px-3 py-1 rounded-full ${
-                                    dark
-                                      ? "bg-zinc-800 text-gray-300"
-                                      : "bg-gray-100 text-gray-700"
-                                  }`}
-                                >
-                                  {tech}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+              <div className="p-5 flex flex-col flex-grow">
+                <div className="flex justify-between items-start mb-3">
+                  <h2
+                    className={`text-lg font-semibold ${
+                      dark ? "text-white" : "text-gray-900"
+                    }`}
+                  >
+                    {proj.title}
+                  </h2>
+                  <button
+                    onClick={() => toggleDetails(proj.id)}
+                    className={`text-xs font-medium px-2 py-1 rounded ${
+                      dark
+                        ? "text-blue-400 bg-blue-900/20 hover:bg-blue-800/30"
+                        : "text-blue-600 bg-blue-100 hover:bg-blue-200"
+                    }`}
+                  >
+                    {visibleDetails[proj.id] ? "Hide" : "Details"}
+                  </button>
                 </div>
 
-                <div className="flex gap-3 mt-6 pt-4 border-t border-gray-800/30">
+                <AnimatePresence>
+                  {visibleDetails[proj.id] && (
+                    <motion.div
+                      className="text-sm mb-4"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <p
+                        className={`mb-3 ${
+                          dark ? "text-gray-300" : "text-gray-600"
+                        }`}
+                      >
+                        {proj.desc}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {proj.techStack.map((tech, index) => (
+                          <span
+                            key={index}
+                            className={`text-xs px-3 py-1 rounded-full ${
+                              dark
+                                ? "bg-zinc-800 text-gray-300"
+                                : "bg-gray-100 text-gray-700"
+                            }`}
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
+                <div className="mt-auto pt-4 flex gap-3 border-t border-gray-800/20">
                   {proj.live && (
                     <a
                       href={proj.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`flex items-center gap-2 text-sm px-4 py-2.5 rounded-lg transition-all flex-1 justify-center ${
+                      className={`text-sm flex-1 text-center px-3 py-2 rounded-md ${
                         dark
-                          ? "bg-purple-600 hover:bg-purple-700 text-white shadow-lg shadow-purple-500/10"
-                          : "bg-purple-500 hover:bg-purple-600 text-white shadow-md"
+                          ? "bg-purple-600 text-white hover:bg-purple-700"
+                          : "bg-purple-500 text-white hover:bg-purple-600"
                       }`}
                     >
-                      <FaExternalLinkAlt className="text-xs" />
                       Live Demo
                     </a>
                   )}
-
                   {proj.code && (
                     <a
                       href={proj.code}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`flex items-center gap-2 text-sm px-4 py-2.5 rounded-lg transition-all flex-1 justify-center ${
+                      className={`text-sm flex-1 text-center px-3 py-2 rounded-md ${
                         dark
-                          ? "bg-zinc-800 hover:bg-zinc-700 text-white"
-                          : "bg-gray-100 hover:bg-gray-200 text-gray-800"
+                          ? "bg-zinc-700 text-white hover:bg-zinc-600"
+                          : "bg-gray-100 text-gray-800 hover:bg-gray-200"
                       }`}
                     >
-                      <FaCode className="text-xs" />
                       View Code
                     </a>
                   )}

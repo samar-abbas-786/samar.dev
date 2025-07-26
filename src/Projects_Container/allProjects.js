@@ -8,12 +8,13 @@ import Img7 from "../assets/images/notice.png";
 import Img8 from "../assets/images/thought.png";
 import Img9 from "../assets/images/leetq.png";
 import Img10 from "../assets/images/npm.png";
-import Img11 from "../assets/images/light.png"; // <-- Add your image here
+import Img11 from "../assets/images/light.png";
+import Img12 from "../assets/images/code.png"; // <-- Add your CodeX image here
 
 export const project = [
   {
     id: 1,
-    title: "TubeGate",
+    title: "TubeGate - One-Click YouTube Publishing Platform",
     url: "",
     img: Img6,
     desc: "Built an automated YouTube publishing platform where editors prefill video title, description, and tags; creators can publish directly to their channel with one click via OAuth, without downloading the video.",
@@ -30,6 +31,24 @@ export const project = [
   },
   {
     id: 2,
+    title: "CodeX – AI-Powered Coding Practice Platform",
+    url: "",
+    img: Img12,
+    desc: "CodeX is an interactive coding platform where users can solve coding problems using a real-time editor. With an integrated AI assistant, users can get step-by-step code explanations instantly based on their current input.",
+    live: "https://code-editor-one-beige.vercel.app/",
+    code: "https://github.com/samar-abbas-786/code-editor",
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Clerk Auth",
+      "Monaco Editor",
+      "Gemini API",
+    ],
+  },
+  {
+    id: 3,
     title: "Transcriptify – AI-Powered Video Summarizer",
     url: "",
     img: Img11,
@@ -46,7 +65,7 @@ export const project = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "LeetQ – AI Browser Assistant for LeetCode",
     url: "",
     img: Img9,
@@ -62,12 +81,12 @@ export const project = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "Samar-Kit : MERN Boilerplate CLI & NPM Package",
     url: "",
     img: Img10,
-    desc: "samar-kit is an npm package and CLI tool that instantly scaffolds a production-ready MERN stack application with built-in routing, authentication, and modular folder structure—accelerating full-stack development.",
-    live: "https://www.npmjs.com/package/samar-kit",
+    desc: "samar_kit is an npm package and CLI tool that instantly scaffolds a production-ready MERN stack application with built-in routing, authentication, and modular folder structure—accelerating full-stack development.",
+    live: "https://www.npmjs.com/package/samar_kit",
     techStack: [
       "Node.js",
       "Express",
@@ -80,8 +99,8 @@ export const project = [
     ],
   },
   {
-    id: 5,
-    title: "EduPI",
+    id: 6,
+    title: "EduPI - Online Learning Platform",
     url: "",
     img: Img1,
     desc: "Designed and developed a comprehensive school management platform...",
@@ -90,8 +109,8 @@ export const project = [
     techStack: ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
   },
   {
-    id: 6,
-    title: "Artify",
+    id: 7,
+    title: "Artify - Online Painting Marketplace",
     url: "https://artify-samar.vercel.app/",
     img: Img2,
     desc: "Developed Artify, an online painting marketplace...",
@@ -100,8 +119,8 @@ export const project = [
     techStack: ["React", "MongoDB", "Express", "Node.js", "Tailwind CSS"],
   },
   {
-    id: 7,
-    title: "Campus Bazaar",
+    id: 8,
+    title: "Campus Bazaar - College Life Marketplace",
     url: "https://campus-bazaar.onrender.com/",
     img: Img3,
     desc: "Introducing Campus Bazaar: Simplify college life...",
@@ -110,8 +129,8 @@ export const project = [
     techStack: ["Node.js", "Express", "MongoDB Cluster", "EJS", "CSS"],
   },
   {
-    id: 8,
-    title: "CareSync",
+    id: 9,
+    title: "CareSync - Healthcare Provider Locator",
     url: "https://caresync2-3.onrender.com",
     img: Img5,
     desc: "CareSync, a Healthcare Website, born from a hackathon...",
@@ -128,8 +147,8 @@ export const project = [
     ],
   },
   {
-    id: 9,
-    title: "Slotify",
+    id: 10,
+    title: "Slotify - Event Scheduling Platform",
     url: "https://gym-website-virid.vercel.app",
     img: Img4,
     desc: "Developed Slotify, an event scheduling platform...",
@@ -137,8 +156,8 @@ export const project = [
     techStack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
   },
   {
-    id: 10,
-    title: "Online Notice Board",
+    id: 11,
+    title: "Online Notice Board ",
     url: "https://notice-board-vx95.onrender.com",
     img: Img7,
     desc: "Built a digital Notice Board system...",
@@ -152,8 +171,8 @@ export const project = [
     ],
   },
   {
-    id: 11,
-    title: "Thoughtify",
+    id: 12,
+    title: "Thoughtify - Social Thought Sharing Platform",
     url: "https://notice-board-vx95.onrender.com",
     img: Img8,
     desc: "Thoughtify is a digital platform for sharing and exploring thoughts...",
