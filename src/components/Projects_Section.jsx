@@ -22,32 +22,38 @@ const Projects_Section = () => {
 
   return (
     <div
-      className={`w-full py-20 transition-colors duration-300 ${
-        dark ? "bg-gradient-to-br from-[#0a0a0a] to-[#1a1a1a]" : "bg-gray-50"
+      className={`w-full py-20 transition-all duration-500 ${
+        dark
+          ? "bg-gradient-to-br from-[#000000] via-[#0f0f1e] to-[#1a0033]"
+          : "bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50"
       }`}
       id="projects"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <button
+          <motion.button
             onClick={scrollToProjects}
-            className={`text-sm font-medium mb-2 flex items-center gap-1 mx-auto px-4 py-2 rounded-full ${
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className={`text-sm font-semibold mb-4 inline-flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 backdrop-blur-sm ${
               dark
-                ? "text-blue-400 hover:text-blue-300 bg-blue-900/10 hover:bg-blue-900/20"
-                : "text-blue-600 hover:text-blue-800 bg-blue-100 hover:bg-blue-200"
-            } transition-all`}
+                ? "text-blue-400 hover:text-blue-300 bg-blue-900/20 border border-blue-500/30 hover:border-blue-400/60 hover:bg-blue-900/30"
+                : "text-blue-600 hover:text-blue-800 bg-blue-100/50 border border-blue-300/50 hover:bg-blue-100 hover:border-blue-400 shadow-sm"
+            }`}
           >
             <span>Explore My Work</span>
-            <svg
+            <motion.svg
               className="w-4 h-4"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
+              animate={{ y: [0, 4, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
             >
               <path
                 strokeLinecap="round"
@@ -55,8 +61,8 @@ const Projects_Section = () => {
                 strokeWidth={2}
                 d="M19 14l-7 7m0 0l-7-7m7 7V3"
               />
-            </svg>
-          </button>
+            </motion.svg>
+          </motion.button>
 
           <motion.h1
             ref={projectsRef}
@@ -64,126 +70,158 @@ const Projects_Section = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className={`text-4xl sm:text-5xl font-bold mb-4 ${
-              dark ? "text-purple-400" : "text-purple-600"
+              dark
+                ? "text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text"
+                : "text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text"
             }`}
           >
             My Projects
           </motion.h1>
+          <div
+            className={`w-24 h-1 mx-auto rounded-full mb-4 ${
+              dark
+                ? "bg-gradient-to-r from-blue-500 to-purple-500"
+                : "bg-gradient-to-r from-blue-600 to-purple-600"
+            }`}
+          />
           <p
             className={`max-w-2xl mx-auto text-lg ${
-              dark ? "text-gray-400" : "text-gray-600"
+              dark ? "text-gray-300" : "text-gray-600"
             }`}
           >
-            A collection of my recent work and contributions
+            A collection of my recent work showcasing innovative solutions and
+            real-world impact
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-          {project.map((proj) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {project.map((proj, idx) => (
             <motion.div
               key={proj.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
-              whileHover={{ y: -5 }}
-              className={`flex flex-col rounded-xl overflow-hidden transition-all duration-300 h-full ${
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              whileHover={{ y: -8 }}
+              className={`flex flex-col rounded-2xl overflow-hidden transition-all duration-300 h-full backdrop-blur-xl group ${
                 dark
-                  ? "bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 shadow-md"
-                  : "bg-white hover:bg-gray-50 border border-gray-200 shadow-sm"
+                  ? "bg-gradient-to-br from-zinc-900/80 to-zinc-800/80 border border-white/10 hover:border-purple-500/50 shadow-xl hover:shadow-2xl hover:shadow-purple-900/30"
+                  : "bg-gradient-to-br from-white/80 to-gray-100/80 border border-gray-200 hover:border-purple-400 shadow-lg hover:shadow-2xl"
               }`}
             >
-              <div className="relative h-48 w-full overflow-hidden">
-                <img
+              {/* Image Container */}
+              <div className="relative h-48 w-full overflow-hidden bg-gray-900/20">
+                <motion.img
                   src={proj.img}
                   alt={proj.title}
                   loading="lazy"
-                  className="w-full h-full object-fit transition-transform duration-500 hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  whileHover={{ scale: 1.1 }}
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
 
-              <div className="p-5 flex flex-col flex-grow">
+              {/* Content Container */}
+              <div className="p-6 flex flex-col flex-grow">
+                {/* Title and Toggle Button */}
                 <div className="flex justify-between items-start mb-3">
                   <h2
-                    className={`text-lg font-semibold ${
+                    className={`text-lg font-bold flex-1 ${
                       dark ? "text-white" : "text-gray-900"
                     }`}
                   >
                     {proj.title}
                   </h2>
-                  <button
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
                     onClick={() => toggleDetails(proj.id)}
-                    className={`text-xs font-medium px-2 py-1 rounded ${
+                    className={`text-xs font-semibold ml-2 px-3 py-1 rounded-lg transition-all duration-300 whitespace-nowrap ${
                       dark
-                        ? "text-blue-400 bg-blue-900/20 hover:bg-blue-800/30"
-                        : "text-blue-600 bg-blue-100 hover:bg-blue-200"
+                        ? `${visibleDetails[proj.id] ? "text-white bg-purple-600" : "text-blue-400 bg-blue-900/30 border border-blue-500/30 hover:bg-blue-900/50"}`
+                        : `${visibleDetails[proj.id] ? "text-white bg-purple-600" : "text-blue-600 bg-blue-100/50 border border-blue-300/50 hover:bg-blue-100"}`
                     }`}
                   >
-                    {visibleDetails[proj.id] ? "Hide" : "Details"}
-                  </button>
+                    {visibleDetails[proj.id] ? "Less" : "More"}
+                  </motion.button>
                 </div>
 
+                {/* Expandable Details */}
                 <AnimatePresence>
                   {visibleDetails[proj.id] && (
                     <motion.div
-                      className="text-sm mb-4"
+                      className="mb-4"
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }}
                     >
                       <p
-                        className={`mb-3 ${
-                          dark ? "text-gray-300" : "text-gray-600"
+                        className={`text-sm mb-4 leading-relaxed ${
+                          dark ? "text-gray-300" : "text-gray-700"
                         }`}
                       >
                         {proj.desc}
                       </p>
                       <div className="flex flex-wrap gap-2">
                         {proj.techStack.map((tech, index) => (
-                          <span
+                          <motion.span
                             key={index}
-                            className={`text-xs px-3 py-1 rounded-full ${
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: index * 0.05 }}
+                            className={`text-xs font-medium px-3 py-1 rounded-lg transition-all duration-300 ${
                               dark
-                                ? "bg-zinc-800 text-gray-300"
-                                : "bg-gray-100 text-gray-700"
+                                ? "bg-purple-900/40 text-purple-300 border border-purple-500/30 hover:bg-purple-900/60"
+                                : "bg-purple-100/50 text-purple-700 border border-purple-300/50 hover:bg-purple-100"
                             }`}
                           >
                             {tech}
-                          </span>
+                          </motion.span>
                         ))}
                       </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
 
-                <div className="mt-auto pt-4 flex gap-3 border-t border-gray-800/20">
+                {/* Action Buttons */}
+                <div
+                  className={`mt-auto pt-4 flex gap-3 border-t transition-colors duration-300 ${
+                    dark ? "border-white/10" : "border-gray-300"
+                  }`}
+                >
                   {proj.live && (
-                    <a
+                    <motion.a
                       href={proj.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`text-sm flex-1 text-center px-3 py-2 rounded-md ${
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className={`text-sm flex-1 text-center px-3 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${
                         dark
-                          ? "bg-purple-600 text-white hover:bg-purple-700"
-                          : "bg-purple-500 text-white hover:bg-purple-600"
+                          ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-lg shadow-purple-900/30"
+                          : "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-md"
                       }`}
                     >
-                      Live Demo
-                    </a>
+                      <FaExternalLinkAlt size={14} />
+                      Live
+                    </motion.a>
                   )}
                   {proj.code && (
-                    <a
+                    <motion.a
                       href={proj.code}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`text-sm flex-1 text-center px-3 py-2 rounded-md ${
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className={`text-sm flex-1 text-center px-3 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${
                         dark
-                          ? "bg-zinc-700 text-white hover:bg-zinc-600"
-                          : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+                          ? "bg-zinc-800/80 text-gray-200 border border-white/10 hover:bg-zinc-700 hover:border-white/20"
+                          : "bg-gray-200/60 text-gray-900 border border-gray-400/50 hover:bg-gray-200 hover:border-gray-400"
                       }`}
                     >
-                      View Code
-                    </a>
+                      <FaCode size={14} />
+                      Code
+                    </motion.a>
                   )}
                 </div>
               </div>
