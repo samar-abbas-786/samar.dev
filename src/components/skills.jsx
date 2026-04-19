@@ -22,11 +22,16 @@ import react from "../assets/images/react.svg";
 import firebase from "../assets/images/Firebase-Dark.svg";
 import Postgre from "../assets/images/PostgreSQL-Dark.svg";
 import Prisma from "../assets/images/Prisma.svg";
+import Spring from "../assets/images/spring-boot.png";
+import AWS from "../assets/images/aws.svg";
 
 const skillsData = [
+  { name: "Java", icon: java },
+  { name: "Spring Boot", icon: Spring },
+  { name: "AWS", icon: AWS },
+
   { name: "C++", icon: cpp },
   { name: "C", icon: c },
-  { name: "Java", icon: java },
   { name: "JavaScript", icon: js },
   { name: "React", icon: react },
   { name: "NextJS", icon: nextjs },

@@ -4,6 +4,49 @@ import { useScroll } from "../context/ScrollContext";
 const experiences = [
   {
     id: 1,
+    title: "Junior Software Engineer Intern",
+    company: "EPAM Systems",
+    duration: "Jan 2026 – Present",
+    location: "Hyderabad",
+    description:
+      "Working with Java, Spring Boot, Spring Core,Spring Cloud, Spring Data JPA, JUnit 5 and Mockito for building and testing scalable enterprise-grade applications.",
+    learnings:
+      "Building RESTful APIs using Clean Code practices, SOLID principles, design patterns, and microservices architecture.",
+    techStack: [
+      "Java",
+      "Spring Boot",
+      "Spring Core",
+      "JUnit 5",
+      "Mockito",
+      "Spring Data JPA",
+      "REST APIs",
+      "Microservices",
+    ],
+  },
+
+  {
+    id: 2,
+    title: "Software Development Intern",
+    company: "Confidence Connector, Innovative Engineering Solutions",
+    duration: "July 2025 – Present",
+    location: "Aligarh",
+    description:
+      "Developed a real-time health monitoring system collecting ECG, heart rate, SpO2, and body temperature data from IoT devices.",
+    learnings:
+      "Built AI chatbot using Gemini API, secure doctor-patient chat system, and AI-generated diagnosis reporting.",
+    techStack: [
+      "React.js",
+      "Node.js",
+      "MongoDB",
+      "Gemini API",
+      "IoT",
+      "WebSocket",
+      "AI Chatbot",
+    ],
+  },
+
+  {
+    id: 3,
     title: "The Amulate Program",
     mentor: "Leonardo Davinci Darwin",
     mentorLink: "https://www.linkedin.com/in/leonardo-davinci-darwin/",
@@ -21,13 +64,14 @@ const experiences = [
     projectLink:
       "https://github.com/samar-abbas-786/Verification-of-Android-OS-enabled-Devices",
   },
+
   {
-    id: 2,
+    id: 4,
     title: "Apna Darzi",
     description:
-      "Developed and refined the Apna Darzi mobile app, enabling seamless online tailoring services with doorstep delivery. Successfully contributed to its launch on the Google Play Store.",
+      "Developed and refined the Apna Darzi mobile app, enabling seamless online tailoring services with doorstep delivery.",
     learnings:
-      "Expertise in developing business logic for startup applications, designing highly optimized APIs, and integrating services like Firebase for notifications, Google Analytics, and more.",
+      "Worked on startup business logic, optimized APIs, Firebase notifications, Google Analytics, and Twilio integrations.",
     techStack: [
       "React.js",
       "React Native",
@@ -48,7 +92,7 @@ export const ExperiencePage = () => {
 
   return (
     <div
-      className={`w-full  transition-colors duration-500 ${
+      className={`w-full transition-colors duration-500 ${
         dark
           ? "bg-gradient-to-tr from-[#000000] via-[#101010] to-[#1a1a1a] text-gray-300"
           : "bg-gray-50 text-gray-700"
@@ -59,11 +103,12 @@ export const ExperiencePage = () => {
           <h1 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             My Experience
           </h1>
+
           <div className="w-20 h-1 mt-3 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full opacity-80"></div>
         </div>
 
         <div className="space-y-20 relative">
-          {/* Center timeline line */}
+          {/* Timeline Line */}
           <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-600 to-purple-600 opacity-20 transform -translate-x-1/2"></div>
 
           {experiences.map((exp, index) => (
@@ -73,14 +118,14 @@ export const ExperiencePage = () => {
                 index % 2 === 0 ? "md:pr-10" : "md:pl-10"
               }`}
             >
-              {/* Timeline dot */}
+              {/* Timeline Dot */}
               <div className="hidden md:flex absolute left-1/2 top-6 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full items-center justify-center z-10">
                 <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
               </div>
 
-              {/* Card Container */}
+              {/* Card */}
               <div
-                className={`rounded-xl p-6 transition-all duration-300 ${
+                className={`rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 ${
                   dark
                     ? "bg-zinc-900 border border-white/10 hover:border-white/20"
                     : "bg-white border border-gray-200 hover:border-gray-300 shadow-sm"
@@ -89,12 +134,22 @@ export const ExperiencePage = () => {
                 {/* Header */}
                 <div className="mb-5">
                   <span className="inline-block mb-3 px-3 py-1 text-xs font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full">
-                    Project #{exp.id}
+                    Experience #{exp.id}
                   </span>
 
                   <h2 className="text-xl font-bold text-gray-400">
                     {exp.title}
                   </h2>
+
+                  {exp.company && (
+                    <p className="mt-1 text-sm text-gray-500">{exp.company}</p>
+                  )}
+
+                  {exp.location && (
+                    <p className="text-xs text-purple-400">
+                      {exp.location} • {exp.duration}
+                    </p>
+                  )}
 
                   {exp.mentor && (
                     <p className="mt-1 text-xs">
@@ -103,6 +158,7 @@ export const ExperiencePage = () => {
                       >
                         Mentor:{" "}
                       </span>
+
                       <a
                         href={exp.mentorLink}
                         target="_blank"
@@ -137,6 +193,7 @@ export const ExperiencePage = () => {
                   <h3 className="text-sm font-medium text-gray-400 mb-2">
                     Technologies Used
                   </h3>
+
                   <div className="flex flex-wrap gap-2">
                     {exp.techStack.map((tech, idx) => (
                       <span
@@ -153,7 +210,7 @@ export const ExperiencePage = () => {
                   </div>
                 </div>
 
-                {/* Project Link */}
+                {/* Link */}
                 {exp.projectLink && (
                   <div className="mt-6">
                     <a
@@ -163,19 +220,6 @@ export const ExperiencePage = () => {
                       className="inline-flex items-center text-sm gap-1.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium py-2 px-4 rounded-lg transition-all hover:opacity-90"
                     >
                       View Project
-                      <svg
-                        className="w-3.5 h-3.5"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                        />
-                      </svg>
                     </a>
                   </div>
                 )}

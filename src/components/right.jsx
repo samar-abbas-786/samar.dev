@@ -43,7 +43,13 @@ const Right = () => {
   const mouseX = useSpring(mouse.x, springConfig);
   const mouseY = useSpring(mouse.y, springConfig);
 
-  const roles = ["Software Engineer", "Full Stack Developer", "Problem Solver"];
+  const roles = [
+    "Java Developer",
+    "Cloud Computing",
+    "Software Engineer",
+    "Full Stack Developer",
+    "Problem Solver",
+  ];
 
   useEffect(() => {
     const move = (e) => setMouse({ x: e.clientX, y: e.clientY });
@@ -54,7 +60,7 @@ const Right = () => {
   useEffect(() => {
     const interval = setInterval(
       () => setRoleIndex((i) => (i + 1) % roles.length),
-      3000
+      3000,
     );
     return () => clearInterval(interval);
   }, []);
