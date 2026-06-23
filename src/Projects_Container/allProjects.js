@@ -189,13 +189,13 @@ export const project = [
       "Tailwind CSS",
     ],
   },
-  {
-    id: 13,
-    title: "Thoughtify - Social Thought Sharing Platform",
-    url: "https://notice-board-vx95.onrender.com",
-    img: Img8,
-    desc: "Thoughtify is a digital platform for sharing and exploring thoughts...",
-    code: "https://github.com/samar-abbas-786/Thoughtify",
-    techStack: ["Next", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
-  },
+  // {
+  //   id: 13,
+  //   title: "Thoughtify - Social Thought Sharing Platform",
+  //   url: "https://notice-board-vx95.onrender.com",
+  //   img: Img8,
+  //   desc: "Thoughtify is a digital platform for sharing and exploring thoughts...",
+  //   code: "https://github.com/samar-abbas-786/Thoughtify",
+  //   techStack: ["Next", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+  // },
 ];
