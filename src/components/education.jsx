@@ -68,7 +68,7 @@ const EducationPage = () => {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               whileHover={{ y: -8 }}
-              className={`relative rounded-2xl overflow-hidden transition-all duration-300 backdrop-blur-xl group ${
+              className={`relative rounded-2xl overflow-hidden transition-all  duration-300 backdrop-blur-xl group ${
                 dark
                   ? "bg-gradient-to-br from-zinc-900/80 to-purple-900/40 border border-purple-500/30 hover:border-purple-400/60 shadow-2xl shadow-purple-900/20 hover:shadow-2xl hover:shadow-purple-900/40"
                   : "bg-gradient-to-br from-white/80 to-blue-50/80 border border-gray-200 hover:border-blue-400 shadow-lg hover:shadow-2xl"
@@ -79,13 +79,13 @@ const EducationPage = () => {
 
               {/* Icon Badge */}
               <div
-                className={`absolute -top-6 left-6 p-4 rounded-xl shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-2 ${
+                className={`absolute top-2  left-6 p-2 rounded-xl shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-2 ${
                   dark
                     ? "bg-gradient-to-br from-purple-600 to-pink-600 text-white"
                     : "bg-gradient-to-br from-purple-500 to-pink-500 text-white"
                 }`}
               >
-                <FaGraduationCap className="text-2xl sm:text-3xl" />
+                <FaGraduationCap className="text-xl sm:text-3xl" />
               </div>
 
               {/* Content */}
