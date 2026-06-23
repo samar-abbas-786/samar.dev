@@ -96,7 +96,7 @@ const TopNav = () => {
                   dark ? "text-gray-400" : "text-gray-600"
                 }`}
               >
-                Full Stack Developer
+                Software Engineer
               </p>
             </div>
           </motion.div>
