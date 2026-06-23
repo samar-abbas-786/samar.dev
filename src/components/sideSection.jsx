@@ -13,8 +13,8 @@ import { SiLeetcode } from "react-icons/si";
 
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../assets/images/samred.jpg";
-import pdf from "../assets/images/samar_resume.pdf";
+import logo from "../assets/images/profile_pic.png";
+import pdf from "../assets/images/samar_abbas_resume.pdf";
 
 import { useScroll } from "../context/ScrollContext";
 
