@@ -45,7 +45,6 @@ const Right = () => {
 
   const roles = [
     "Java Developer",
-    "Cloud Computing",
     "Software Engineer",
     "Full Stack Developer",
     "Problem Solver",
@@ -153,7 +152,7 @@ const Right = () => {
           transition={{ duration: 0.8 }}
           className="relative z-10"
         >
-          <motion.div
+          {/* <motion.div
             className="mb-6 inline-block"
             animate={{ scale: [1, 1.05, 1] }}
             transition={{ duration: 3, repeat: Infinity }}
@@ -167,7 +166,7 @@ const Right = () => {
             >
               👨‍💻 Welcome to My Portfolio
             </span>
-          </motion.div>
+          </motion.div> */}
 
           <h1 className="text-4xl md:text-7xl font-extrabold mb-6 leading-tight">
             Hey there! 👋 I'm

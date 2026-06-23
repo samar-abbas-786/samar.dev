@@ -29,7 +29,7 @@ const experiences = [
     id: 2,
     title: "Software Development Intern",
     company: "Confidence Connector, Innovative Engineering Solutions",
-    duration: "July 2025 – Present",
+    duration: "July 2025 – October 2025",
     location: "Aligarh",
     description:
       "Developed a real-time health monitoring system collecting ECG, heart rate, SpO2, and body temperature data from IoT devices.",

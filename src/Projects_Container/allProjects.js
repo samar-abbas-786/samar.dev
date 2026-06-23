@@ -10,10 +10,29 @@ import Img9 from "../assets/images/leetq.png";
 import Img10 from "../assets/images/npm.png";
 import Img11 from "../assets/images/light.png";
 import Img12 from "../assets/images/code.png"; // <-- Add your CodeX image here
+import Img13 from "../assets/images/feedLight.png"; // <-- Add your CodeX image here
 
 export const project = [
   {
     id: 1,
+    title: "FeedbackFlow – AI-Powered Employee Feedback Platform",
+    url: "",
+    img: Img13, // Add corresponding image import
+    desc: "Developed a full-stack employee feedback management platform with role-based dashboards, secure feedback workflows, and AI-powered sentiment analysis. Integrated Google Gemini API to generate actionable insights from employee feedback and containerized the application using Docker for seamless deployment.",
+    live: "https://feed-back-flow.vercel.app/",
+    code: "https://github.com/samar-abbas-786/FeedBackFlowServer/",
+    techStack: [
+      "Java",
+      "Spring Boot",
+      "Spring Security",
+      "React",
+      "MongoDB",
+      "Google Gemini API",
+      "Docker",
+    ],
+  },
+  {
+    id: 2,
     title: "TubeGate - One-Click YouTube Publishing Platform",
     url: "",
     img: Img6,
@@ -30,7 +49,7 @@ export const project = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "CodeX – AI-Powered Coding Practice Platform",
     url: "",
     img: Img12,
@@ -48,7 +67,7 @@ export const project = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Transcriptify – AI-Powered Video Summarizer",
     url: "",
     img: Img11,
@@ -65,7 +84,7 @@ export const project = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "LeetQ – AI Browser Assistant for LeetCode",
     url: "",
     img: Img9,
@@ -81,7 +100,7 @@ export const project = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Samar-Kit : MERN Boilerplate CLI & NPM Package",
     url: "",
     img: Img10,
@@ -99,7 +118,7 @@ export const project = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "EduPI - Online Learning Platform",
     url: "",
     img: Img1,
@@ -109,7 +128,7 @@ export const project = [
     techStack: ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
   },
   {
-    id: 7,
+    id: 8,
     title: "Artify - Online Painting Marketplace",
     url: "https://artify-samar.vercel.app/",
     img: Img2,
@@ -119,7 +138,7 @@ export const project = [
     techStack: ["React", "MongoDB", "Express", "Node.js", "Tailwind CSS"],
   },
   {
-    id: 8,
+    id: 9,
     title: "Campus Bazaar - College Life Marketplace",
     url: "https://campus-bazaar.onrender.com/",
     img: Img3,
@@ -129,7 +148,7 @@ export const project = [
     techStack: ["Node.js", "Express", "MongoDB Cluster", "EJS", "CSS"],
   },
   {
-    id: 9,
+    id: 10,
     title: "CareSync - Healthcare Provider Locator",
     url: "https://caresync2-3.onrender.com",
     img: Img5,
@@ -147,7 +166,7 @@ export const project = [
     ],
   },
   {
-    id: 10,
+    id: 11,
     title: "Slotify - Event Scheduling Platform",
     url: "https://gym-website-virid.vercel.app",
     img: Img4,
@@ -156,7 +175,7 @@ export const project = [
     techStack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
   },
   {
-    id: 11,
+    id: 12,
     title: "Online Notice Board ",
     url: "https://notice-board-vx95.onrender.com",
     img: Img7,
@@ -171,7 +190,7 @@ export const project = [
     ],
   },
   {
-    id: 12,
+    id: 13,
     title: "Thoughtify - Social Thought Sharing Platform",
     url: "https://notice-board-vx95.onrender.com",
     img: Img8,
