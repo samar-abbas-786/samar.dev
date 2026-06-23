@@ -7,7 +7,7 @@ const experiences = [
     id: 1,
     title: "Junior Software Engineer Intern",
     company: "EPAM Systems",
-    duration: "Jan 2026 – Present",
+    duration: "Jan 2026 – June 2026",
     location: "Hyderabad",
     description:
       "Working with Java, Spring Boot, Spring Core,Spring Cloud, Spring Data JPA, JUnit 5 and Mockito for building and testing scalable enterprise-grade applications.",
